@@ -1,6 +1,15 @@
 body {
   background-color: rgb(93, 142, 129);
 }
-
+.simplenavbar {
+  position: relative;
+}
+#tituloprincipal {
+  font-weight: bold;
+  font-size: 30px;
+  position: absolute;
+  top: 40px;
+  left: 40%;
+}
 #cagado {
 }
