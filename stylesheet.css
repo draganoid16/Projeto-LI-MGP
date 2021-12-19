@@ -11,5 +11,19 @@ body {
   top: 40px;
   left: 40%;
 }
-#cagado {
+.choice{
+display: inline-flex;
+position: absolute;
+top: 30%;
+right: 38%;
+}
+
+#cagado{
+margin-right: 50px;
+}
+
+.choice1{
+position: absolute;
+margin-top: 20%;
+right: 34%;
 }
