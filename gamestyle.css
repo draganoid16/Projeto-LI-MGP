@@ -1,54 +1,96 @@
 body {
-  background-color: rgb(93, 142, 129);
+  background-color: rgb(93, 142, 113);
   padding: 0;
   margin: 0;
 }
+.container {
+  padding-top: 40px;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(8, [col-start] 1fr);
+  grid-template-rows: repeat(6, [col-start] 1fr);
+  gap: 10px;
+}
+.item1 {
+  grid-column: col-start / span 3;
+}
+.item2 {
+  grid-column: col-start 6 / span 4;
+  grid-row: 1 / 3;
+}
+.item3 {
+  grid-column: col-start 2 / span 2;
+  grid-row: 2;
+}
 .simplenavbar {
-  position: relative;
+  grid-column: col-start 3 / 8;
+  grid-row: 1;
+  margin: 0;
+  padding: 0;
 }
-
 #tituloprincipal {
-  font-weight: bold;
-  font-size: 30px;
-  position: absolute;
-  top: 40px;
-  left: 40%;
+  margin: 0;
+  padding: 0;
+  font-size: max(5vw, 10px);
+  font-family: Arial, Helvetica, sans-serif;
 }
-.container-botoes {
-width: 100vw;
-  display: flex;
-flex-direction: row;
-gap: 3vw;
-justify-content: flex-end;
-}
-
-#cagado {
-  margin-right: 50px;
-}
-
 .choice1 {
-  position: absolute;
-  margin-top: 20%;
-  right: 34%;
+  font-family: Arial, Helvetica, sans-serif;
+  grid-column: col-start 2 / span 6;
+  grid-row: 3/6;
+  display: grid;
+  grid-template-columns: repeat(6, [col-start] 1fr);
+  grid-template-rows: repeat(3, [col-start] 1fr);
+  gap: 10px;
 }
 
+.pergunta_style {
+  grid-column: col-start 2 / span 4;
+  grid-row: 1/2;
+  text-align: center;
+  font-size: max(3vw, 10px);
+}
+
+.botao_style1,
+.botao_style2,
+.botao_style3 {
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 3vw;
+
+  z-index: 1;
+}
 #botao_castanho {
-  background-color: rgb(109, 71, 71);
-  border: 1px solid rgb(109, 71, 71);
-  width: 15vw;
-  height: 15vh;
+  background-color: rgb(85, 52, 52);
 }
-
 #botao_verde {
-  background-color: rgb(86, 126, 81);
-  border: 1px solid rgb(86, 126, 81);
-  width: 15vw;
-  height: 15vh;
+  background-color: rgb(60, 122, 55);
 }
-.botao_style {
-  background-color: rgb(207, 207, 207);
-  border: 1px solid rgb(255, 255, 255);~
-  width: 15vw;
-  height: 15vh;
-  border-radius: 15% 5% 15% 5%;
+#botao_cinzento {
+  background-color: rgb(114, 114, 114);
+}
+.botao_style1 {
+  grid-column: col-start 3 / span 2;
+  grid-row: 2/3;
+}
+.botao_style2 {
+  grid-column: col-start 5 / span 2;
+  grid-row: 2/3;
+}
+.botao_style3 {
+  grid-column: col-start 1 / span 2;
+  grid-row: 2/3;
+}
+.homebutton {
+  grid-column: col-start 1 / span 2;
+  grid-row: 1;
+}
+.botao_style1:hover,
+.botao_style2:hover,
+.botao_style3:hover {
+  padding: 0 0 10px 0;
+  font-size: 3.1vw;
+  text-decoration: underline 3px;
 }

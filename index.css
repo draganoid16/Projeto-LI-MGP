@@ -1,8 +1,9 @@
 body {
   background-color: grey;
+  overflow: hidden;
 }
-
-/butao principal/ .iniciar {
+/*butao principal*/
+.iniciar {
   position: absolute;
   width: 12vw;
   height: 5vw;
@@ -58,28 +59,55 @@ body {
     min-width: 196px;
   }
 }
-/butao principal/ .container-perfis {
+/*butao principal*/
+
+.main {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.container-perfis {
   position: relative;
   display: flex;
-  display: none;
   gap: 3vw;
   justify-content: center;
   align-items: flex;
   margin-top: 10px;
   color: white;
 }
-
 .imagem-perfil {
   width: 10vw;
   border-style: solid;
   border-width: 5px;
 }
 
-#videobackground {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -3;
+.container-main p {
+  position: absolute;
+  color: #685206;
+  font-family: "Roboto", sans-serif;
+  line-height: 24px;
+  margin: 0 0 24px;
+  font-size: 30px;
+  bottom: 5%;
+  left: 2%;
+  text-shadow: 2px 2px #000000;
+}
+
+.container-main {
+  background-image: url(https://images3.alphacoders.com/688/688687.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-service {
+  background-image: url(https://images3.alphacoders.com/688/688687.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
 }
