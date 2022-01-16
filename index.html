@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css"/> <!--CSS da Pagina, o resto são bootstrap-->
-</head>
-<body style="background-color: grey;">
-<form action="game.html">
-    <input type="submit" value="Iniciar" id="iniciar" />
-</form>
-    
- <p>Feito por:</p>
-  <div class="joao">
-   <img src="resources/joao.jpg" alt="joao">
-   <p>João Coelho</p> 
-   <a href="https://www.linkedin.com/in/jo%C3%A3o-coelho-b24908156/">LinkedIn</a>
-   
-   
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <!--CSS da Pagina, o resto são bootstrap-->
+  </head>
+  <body>
+    <div class="container-main">
+     <video autoplay muted loop id="videobackground">
+     <source src="resources/video.mp4" type="video/mp4">
+     </video>
+     
+      <form action="game.html">
+        <button type="submit" class="iniciar" role="button">
+            <span class="text">Iniciar</span></button>
+      </form>
 
-  </div>
+      <div class="container-perfis">
+        <div class="joao">
+          <img class="imagem-perfil" src="resources/joao.jpg" alt="joao" />
+          <p>João Coelho</p>
+          <a href="https://www.linkedin.com/in/jo%C3%A3o-coelho-b24908156/">LinkedIn</a>
+        </div>
 
-</body>
+        <div class="tomas">
+          <img class="imagem-perfil" src="resources/tomas.jpg" alt="tomas" />
+          <p>Tomas Rosa</p>
+          <a href="https://www.linkedin.com/in/tom%C3%A1s-paix%C3%A3o-rosa-434628228/">LinkedIn</a>
+        </div>
+
+        <div class="murilo">
+          <img class="imagem-perfil" src="resources/murilo.jpg" alt="murilo" />
+          <p>Murilo Amado</p>
+          <a href="https://www.linkedin.com/in/murilo-amado-47b7a4144/">LinkedIn</a>
+        </div>
+        <div class="goncalo">
+          <img
+            class="imagem-perfil"
+            src="resources/goncalo.jpg"
+            alt="goncalo"/>
+          <p>Goncalo Menezes</p>
+          <a href="https://www.linkedin.com/in/gon%C3%A7alomenezes/">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
