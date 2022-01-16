@@ -5,33 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>haha funny project</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="gamestyle.css"/> <!--CSS da Pagina, o resto são bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="gamestyle.css" />
+    <!--CSS da Pagina, o resto são bootstrap-->
   </head>
-
 
   <body>
     <div class="container">
       <div class="simplenavbar">
         <p id="tituloprincipal">Identificação de répteis.</p>
         <div class="choice1">
-         <p class="pergunta_style" id="pergunta1">De que cor é o seu animal?</p>
-         <button class="botao_style" id="botao_castanho">Castanho</button>
-         <button class="botao_style" id="botao_verde">Verde</button>
-       </div>
+          <p class="pergunta_style" id="pergunta1">
+            De que cor é o seu animal?
+          </p>
+          <div class="container-botoes">
+            <button class="botao_style" id="botao_castanho">Castanho</button>
+            <button class="botao_style" id="botao_verde">Verde</button>
+          </div>
+        </div>
       </div>
       <div class="choice">
         <button id="cagado">
-          <img src="resources/cagado.jpg" alt="cagado"/>
-          <p><a href="https://pt.wikipedia.org/wiki/C%C3%A1gado-mediterr%C3%A2nico" target="_blank">Your animal is a Cagado!</a></p>
+          <img src="resources/cagado.jpg" alt="cagado" />
+          <p>
+            <a
+              href="https://pt.wikipedia.org/wiki/C%C3%A1gado-mediterr%C3%A2nico"
+              target="_blank"
+              >Your animal is a Cagado!</a
+            >
+          </p>
         </button>
         <button id="osga-moura">
           <img src="resources/osga-moura.jpg" alt="osga-moura" />
-          <p><a href="https://pt.wikipedia.org/wiki/Osga-moura" target="_blank">Your animal is a Osga-Moura!</a></p>
+          <p>
+            <a href="https://pt.wikipedia.org/wiki/Osga-moura" target="_blank"
+              >Your animal is a Osga-Moura!</a
+            >
+          </p>
         </button>
       </div>
     </div>
 
-    <script src="script.js"></script> <!--JS da Pagina-->
+    <script src="script.js"></script>
+    <!--JS da Pagina-->
   </body>
 </html>

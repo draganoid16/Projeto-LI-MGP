@@ -1,9 +1,12 @@
 body {
   background-color: rgb(93, 142, 129);
+  padding: 0;
+  margin: 0;
 }
 .simplenavbar {
   position: relative;
 }
+
 #tituloprincipal {
   font-weight: bold;
   font-size: 30px;
@@ -11,22 +14,41 @@ body {
   top: 40px;
   left: 40%;
 }
-.choice{
-display: inline-flex;
-position: absolute;
-top: 30%;
-right: 38%;
+.container-botoes {
+width: 100vw;
+  display: flex;
+flex-direction: row;
+gap: 3vw;
+justify-content: flex-end;
 }
 
-#cagado{
-margin-right: 50px;
+#cagado {
+  margin-right: 50px;
 }
 
-.choice1{
-position: absolute;
-margin-top: 20%;
-right: 34%;
+.choice1 {
+  position: absolute;
+  margin-top: 20%;
+  right: 34%;
 }
-.botao_style{
-  background-color: aquamarine;
+
+#botao_castanho {
+  background-color: rgb(109, 71, 71);
+  border: 1px solid rgb(109, 71, 71);
+  width: 15vw;
+  height: 15vh;
+}
+
+#botao_verde {
+  background-color: rgb(86, 126, 81);
+  border: 1px solid rgb(86, 126, 81);
+  width: 15vw;
+  height: 15vh;
+}
+.botao_style {
+  background-color: rgb(207, 207, 207);
+  border: 1px solid rgb(255, 255, 255);~
+  width: 15vw;
+  height: 15vh;
+  border-radius: 15% 5% 15% 5%;
 }
