@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(93, 142, 113);
+  background-color: rgb(209, 209, 209);
   padding: 0;
   margin: 0;
 }
@@ -10,7 +10,6 @@ body {
   display: grid;
   grid-template-columns: repeat(8, [col-start] 1fr);
   grid-template-rows: repeat(6, [col-start] 1fr);
-  gap: 10px;
 }
 .item1 {
   grid-column: col-start / span 3;
@@ -42,7 +41,7 @@ body {
   display: grid;
   grid-template-columns: repeat(6, [col-start] 1fr);
   grid-template-rows: repeat(3, [col-start] 1fr);
-  gap: 10px;
+  grid-column-gap: 8vw;
 }
 
 .pergunta_style {
@@ -55,22 +54,12 @@ body {
 .botao_style1,
 .botao_style2,
 .botao_style3 {
-  color: white;
-  border: 1px solid transparent;
+  color: rgb(0, 0, 0);
   border-radius: 5px;
-  font-size: 3vw;
-
+  background-color: transparent;
   z-index: 1;
 }
-#botao_castanho {
-  background-color: rgb(85, 52, 52);
-}
-#botao_verde {
-  background-color: rgb(60, 122, 55);
-}
-#botao_cinzento {
-  background-color: rgb(114, 114, 114);
-}
+
 .botao_style1 {
   grid-column: col-start 3 / span 2;
   grid-row: 2/3;
@@ -87,10 +76,70 @@ body {
   grid-column: col-start 1 / span 2;
   grid-row: 1;
 }
-.botao_style1:hover,
-.botao_style2:hover,
-.botao_style3:hover {
-  padding: 0 0 10px 0;
-  font-size: 3.1vw;
-  text-decoration: underline 3px;
+
+.botao_style1 {
+  font-size: 2.5vw;
+  border: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.botao_style1:before {
+  content: "";
+  background: rgb(85, 52, 52);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 0%;
+  transition: 0.2s ease-out;
+  z-index: -1;
+}
+.botao_style1:hover:before {
+  height: 100%;
+}
+
+.botao_style2 {
+  font-size: 2.5vw;
+  border: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.botao_style2:before {
+  content: "";
+  background: rgb(60, 122, 55);
+  position: absolute;
+  width: 0%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: 0.2s ease-out;
+  z-index: -1;
+}
+.botao_style2:hover:before {
+  width: 100%;
+}
+/*rgb(114, 114, 114)*/
+
+.botao_style3 {
+  font-size: 2.5vw;
+  border: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.botao_style3:before {
+  content: "";
+  background: rgb(114, 114, 114);
+  position: absolute;
+  width: 0%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: 0.2s ease-out;
+  z-index: -1;
+}
+.botao_style3:hover:before {
+  width: 100%;
 }

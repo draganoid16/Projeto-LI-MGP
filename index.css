@@ -101,9 +101,6 @@ body {
 }
 
 .container-service {
-  background-image: url(https://images3.alphacoders.com/688/688687.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 section {
@@ -111,3 +108,5 @@ section {
   flex-direction: column;
   height: 200vh;
 }
+
+/*
