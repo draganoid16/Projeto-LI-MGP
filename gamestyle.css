@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(209, 209, 209);
+  background-color: rgb(212, 192, 154);
   padding: 0;
   margin: 0;
 }
@@ -67,6 +67,7 @@ body {
 .botao_style2 {
   grid-column: col-start 5 / span 2;
   grid-row: 2/3;
+  background-color: rgb(60, 122, 55);
 }
 .botao_style3 {
   grid-column: col-start 1 / span 2;
@@ -108,9 +109,9 @@ body {
 }
 .botao_style2:before {
   content: "";
-  background: rgb(60, 122, 55);
+  background: rgb(212, 192, 154);
   position: absolute;
-  width: 0%;
+  width: 100%;
   top: 0;
   left: 0;
   height: 100%;
@@ -118,7 +119,7 @@ body {
   z-index: -1;
 }
 .botao_style2:hover:before {
-  width: 100%;
+  width: 0%;
 }
 /*rgb(114, 114, 114)*/
 
