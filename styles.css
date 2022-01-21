@@ -1,122 +1,169 @@
-body{
-    font-family: 'Courier New', Courier, monospace;
+body {
+  font-family: "Courier New", Courier, monospace;
 }
-nav{
-    position: fixed;
-    width: 100vw;
-    height: 10vh;
-    background: rgba(4, 90, 83, 0.5);
-}
-
-.nav-item{
-    display: inline-block;
-    line-height: 10vh;;
-    padding: 0 0.5vw;
-    font-size: 3vh;
-    text-decoration: none;
-    color: black;
+nav {
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  background: rgba(4, 90, 83, 0.5);
 }
 
-.nav-item:hover{
-    cursor: pointer;
-    background: rgba(195, 206, 205, 0.5);
-    
-    font-weight: bold;
+.nav-item {
+  display: inline-block;
+  line-height: 10vh;
+  padding: 0 0.5vw;
+  font-size: 3vh;
+  text-decoration: none;
+  color: black;
 }
-header > div{
-    position: relative;
-    z-index: -1;    
+
+.nav-item:hover {
+  cursor: pointer;
+  background: rgba(195, 206, 205, 0.5);
+
+  font-weight: bold;
 }
-header > div > img{
-    /*width: 100vw;
+header > div {
+  position: relative;
+  z-index: -1;
+}
+header > div > img {
+  /*width: 100vw;
     height: 40vh;
     * COM O EXEMPLO ABEIXO FICA RESPONSIVE */
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
-header > div > span{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-header > div > div{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.middle-text{
-    font-size: 5vh;
-    font-style: italic;
-    font-weight: bold;
-    display: inline-block;
-    animation: rotateIn; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
-    background: rgba(218, 226, 226, 0.5);
-    padding: 5vh;
+header > div > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.biologist-box{
-    cursor:default;
-    border: 1px solid black;
-    font-style: italic;
-    margin: 2vh 10vw;
-    padding: 8vh;
-    font-size: 3.5vh;
-    animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
+header > div > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.middle-text {
+  font-size: 5vh;
+  font-style: italic;
+  font-weight: bold;
+  display: inline-block;
+  animation: rotateIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+  background: rgba(218, 226, 226, 0.5);
+  padding: 5vh;
 }
 
-.most-common{
-    border: 1px solid brown;
-    margin: 0 10vw;
-    text-align: center;
-    cursor: default;
+.biologist-box {
+  cursor: default;
+  border: 1px solid black;
+  font-style: italic;
+  margin: 2vh 10vw;
+  padding: 8vh;
+  font-size: 3.5vh;
+  animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
 }
 
-.card{
-    display: inline-block;
-    margin: 0 2.5vw;
-    height: 30vh;
-    width: 20vw;
+.most-common {
+  border: 1px solid brown;
+  margin: 0 10vw;
+  text-align: center;
+  cursor: default;
 }
 
-.card > img{
-    height: 30vh;
-    width: 20vw;
-    border: 2px dashed black;
-    border-radius: 15px;
+.card {
+  display: inline-block;
+  margin: 0 2.5vw;
+  height: 30vh;
+  width: 20vw;
 }
 
-legend{
-    height: 29vh;
-    width: 20vw;  
-    background: rgba(47, 49, 49, 0.2);
-    position: absolute;
-    padding-top: 10px; 
-    border-radius: 15px;
-    z-index: 1;
-    font-weight: bold;
-    font-size: 2.5vh;
-}
-legend:hover{
-    background: rgba(47, 49, 49, 0.5);
-}
-.latim{
-    font-style: italic;
-    float: right;
-    margin: 10px;
-    font-size: 2vh;
-}
-.text-card{
-    font-size: 2vh;
-    padding: 15px;
-    text-align: justify;
-    display: none;
+.card > img {
+  height: 30vh;
+  width: 20vw;
+  border: 2px dashed black;
+  border-radius: 15px;
 }
 
+legend {
+  height: 29vh;
+  width: 20vw;
+  background: rgba(47, 49, 49, 0.2);
+  position: absolute;
+  padding-top: 10px;
+  border-radius: 15px;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 2.5vh;
+}
+legend:hover {
+  background: rgba(47, 49, 49, 0.5);
+}
+.latim {
+  font-style: italic;
+  float: right;
+  margin: 10px;
+  font-size: 2vh;
+}
+.text-card {
+  font-size: 2vh;
+  padding: 15px;
+  text-align: justify;
+  display: none;
+}
+.game-section {
+  height: 80vh;
+  border: 1px solid rgb(42, 165, 79);
+  margin: 3vh 10vw;
+  text-align: center;
+  cursor: default;
+}
+
+.about-us {
+  background-color: #1d1f22;
+  height: 25vh;
+}
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 9vw;
+  margin-right: 9vw;
+}
+.other-pages-footer {
+}
+.links-footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-title {
+  color: #b3b3b3;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+.links-footer {
+  text-decoration: none;
+  color: #ffffff;
+  width: fit-content;
+}
+.links-footer:hover {
+  text-decoration: underline;
+}
+
+.bottom-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#copyright {
+  font-size: 23px;
+}
 /*
 .biologist-text{
     border: 1px solid brown;
@@ -128,3 +175,19 @@ legend:hover{
     animation-duration: 2s; /* don't forget to set a duration! */
 /*}
 */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(95, 129, 109);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(86, 121, 100);
+}

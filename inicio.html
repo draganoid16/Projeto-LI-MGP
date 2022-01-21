@@ -1,72 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Repteis de Portugal</title>
     <!-- Icone ao lado do titulo -->
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/47/47371.png">
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/47/47371.png"
+    />
     <!-- Adiciona o CSS-->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <!-- Adiciona as animações -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-
-</head>
-<body style="margin: 0;"> <!-- Importante-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body style="margin: 0">
+    <!-- Importante-->
     <header>
-        <nav>
-            <a class="nav-item" href="#">Inicio</a>
-            <a class="nav-item" href="#most-common">Répteis mais comuns</a>
-            <a class="nav-item">Jogo</a>
-            <a class="nav-item">Sobre nós</a>
-        </nav>
-        <div>
-            <img src="https://i.pinimg.com/originals/d4/3a/46/d43a46294ee0d0831a9a8b4177f5da9f.jpg">
-            <!--
+      <nav>
+        <a class="nav-item" href="#">Inicio</a>
+        <a class="nav-item" href="#most-common">Répteis mais comuns</a>
+        <a class="nav-item" href="game.html">Jogo</a>
+        <a class="nav-item" href="#about-us">Sobre nós</a>
+      </nav>
+      <div>
+        <img
+          src="https://i.pinimg.com/originals/d4/3a/46/d43a46294ee0d0831a9a8b4177f5da9f.jpg"
+        />
+        <!--
             <img src="https://cdn1.epicgames.com/ue/product/Screenshot/OlbertsLowPolySwampScreenshot06-1920x1080-bd03ed1fcc0cef1c1f217eda92397353.png?resize=1&w=1920">
             -->
-            <div>
-                <span class="middle-text">Répteis de Portugal</span>
-            </div>
-        </div>        
+        <div>
+          <span class="middle-text">Répteis de Portugal</span>
+        </div>
+      </div>
     </header>
 
     <section class="biologist-box">
-        Apesar de portugal ser um pais pequeno, existe uma grande variedade de especies de répteis que podem avistadas! 
+      Apesar de portugal ser um pais pequeno, existe uma grande variedade de
+      espécies de répteis que podem avistadas!
     </section>
 
     <section id="most-common" class="most-common">
-        <h1>Répteis mais comuns no nosso território</h1>
-        <div class="card" onmouseover="show_text(0)" onmouseout="hide_text(0)">
-            <legend>Cágado-mediterrânico<br><span class="latim">Mauremys leprosa</span><br>
-                <p class="text-card">É um cágado da família Geoemydidae. Está presente na Península Ibérica e Sul de França, no Norte de África (Marrocos, Argélia e Tunísia). Anteriormente, estava incluído na espécie Mauremys caspica.</p>
-            </legend>
-            <img src="cagado.jpg">
+      <h1>Répteis mais comuns no nosso território</h1>
+      <div class="card" onmouseover="show_text(0)" onmouseout="hide_text(0)">
+        <legend>
+          Cágado-mediterrânico<br /><span class="latim">Mauremys leprosa</span
+          ><br />
+          <p class="text-card">
+            É um cágado da família Geoemydidae. Está presente na Península
+            Ibérica e Sul de França, no Norte de África (Marrocos, Argélia e
+            Tunísia). Anteriormente, estava incluído na espécie Mauremys
+            caspica.
+          </p>
+        </legend>
+        <img src="cagado.jpg" />
+      </div>
+      <div class="card" onmouseover="show_text(1)" onmouseout="hide_text(1)">
+        <legend>
+          Camaleão-comum<br /><span class="latim">Chamaeleo chamaeleon</span
+          ><br />
+          <p class="text-card">
+            Juntamente com o camaleão-africano é única espécie da família
+            Chamaeleonidae presente na Europa. Alimenta-se de insetos,
+            especialmente gafanhotos.
+          </p>
+        </legend>
+        <img src="camaleao.jpg" />
+      </div>
+      <div class="card" onmouseover="show_text(2)" onmouseout="hide_text(2)">
+        <legend>
+          Tartaruga-comum<br /><span class="latim">Caretta caretta</span><br />
+          <p class="text-card">
+            É uma espécie de tartaruga marinha pertencente à família
+            Cheloniidae. Habita no oceano Atlântico, Pacífico e Índico, e no
+            Mediterrâneo. Actualmente é a única espécie do género Caretta.
+          </p>
+        </legend>
+        <img src="tartaruga.jpg" />
+      </div>
+    </section>
+    <section id="game-section" class="game-section"></section>
+    <section id="about-us" class="about-us">
+      <div class="footer-info">
+        <div class="group-info">
+          <p class="footer-title">bruh</p>
         </div>
-        <div class="card" onmouseover="show_text(1)" onmouseout="hide_text(1)">
-            <legend>Camaleão-comum<br><span class="latim">Chamaeleo chamaeleon</span><br>
-                <p class="text-card">Juntamente com o camaleão-africano é única espécie da família Chamaeleonidae presente na Europa. Alimenta-se de insetos, especialmente gafanhotos.</p>
-            </legend>
-            <img src="camaleao.jpg">
+        <div class="section2">
+          <p class="footer-title">bruh</p>
         </div>
-        <div class="card" onmouseover="show_text(2)" onmouseout="hide_text(2)">
-            <legend>Tartaruga-comum<br><span class="latim">Caretta caretta</span><br>
-                <p class="text-card">É uma espécie de tartaruga marinha pertencente à família Cheloniidae. Habita no oceano Atlântico, Pacífico e Índico, e no Mediterrâneo. Actualmente é a única espécie do género Caretta.</p>
-            </legend>
-            <img src="tartaruga.jpg">
+        <div class="other-pages-footer">
+          <div class="links-footer-container">
+            <p class="footer-title">Outros Sites</p>
+            <a href="https://www.ua.pt/" class="links-footer">UA</a>
+            <a href="https://www.ua.pt/pt/estga" class="links-footer">ESTGA</a>
+          </div>
         </div>
+      </div>
+      <div class="bottom-footer">
+        <p class="footer-title" id="copyright">&copy 2022</p>
+      </div>
     </section>
 
     <script>
-        const text_card = document.getElementsByClassName("text-card");
-        function show_text(i){
-            text_card[i].style.display ="inline";
-        }
-        function hide_text(i){
-            text_card[i].style.display ="none";
-        }
+      const text_card = document.getElementsByClassName("text-card");
+      function show_text(i) {
+        text_card[i].style.display = "inline";
+      }
+      function hide_text(i) {
+        text_card[i].style.display = "none";
+      }
     </script>
-</body>
+  </body>
 </html>
