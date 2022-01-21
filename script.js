@@ -22,7 +22,7 @@ function pergunta1(){
         escolhas[0] = "Cinzento";
         console.log(escolhas);
         pergunta2();
-       }
+    }
        
     botao2.onclick  = function(){
         escolhas[0] = "Castanho"
