@@ -10,6 +10,7 @@ nav{
     width: 100vw;
     height: 10vh;
     background: rgba(133, 245, 99, 0.5);
+    z-index: 20;
 }
 
 .nav-item {
@@ -19,6 +20,7 @@ nav{
   font-size: 3vh;
   text-decoration: none;
   color: black;
+  z-index: 50;
 }
 
 .nav-item:hover {
@@ -79,14 +81,14 @@ header > div > div {
     cursor: default;
 }
 
-.card{
+.cardAnimal{
     display: inline-block;
     margin: 2.5vh 2.5vw;
     height: 30vh;
     width: 20vw;
 }
 
-.card > img {
+.cardAnimal > img {
   height: 30vh;
   width: 20vw;
   border: 2px dashed black;

@@ -15,9 +15,7 @@ const perguntas = [
   "Em que ambiente viu o animal?",
   "Viu-o em água",
 ];
-//const perguntaescolhida = Math.floor(Math.random() * perguntas.length);
 
-//console.log(perguntaescolhida, perguntas[perguntaescolhida]);
 pergunta1();
 
 function pergunta1() {
@@ -49,14 +47,32 @@ function pergunta2() {
   botao1.innerHTML = "Sim";
   botao2.style.display = "none";
   botao3.innerHTML = "Não";
+  //NAZAS NÃO TOCA QUERO QUE ISTO FIQUE SEPARADO
+  botao1.style.backgroundColor = "rgb(82, 163, 131)"; //mete uma cor nova
+  botao3.style.backgroundColor = "rgb(82, 163, 131)";
+  
+
   botao1.onclick = function () {
     // se for sim
-    escolhas[1] = "Sim";
+    
+    if(escolhas[1] = "Sim"){
     textodoanimal.innerHTML =
       "cor " + escolhas[0] + "olhos movem-se autonomamente: " + escolhas[1];
-    alert("O animal que avistou foi o camaleão!");
+
     console.log(escolhas);
+
+    document.getElementById("tituloprincipal").style.display = "none";
+    document.getElementById("textofinal").style.display = "none";
+    document.getElementById("pergunta1").style.display = "none";
+
+    botao1.style.display = "none";
+    botao2.style.display = "none";
+    botao3.style.display = "none";
+
+    document.getElementById("camaleão").style.display = "block";
   };
+
+};
 
   botao3.onclick = function () {
     escolhas[1] = "Não";
@@ -217,94 +233,3 @@ function pergunta6() {
     alert("O animal que avistou foi uma tartaruga!");
   };
 }
-/*
-function pergunta1(){
-    frase.innerHTML = "De que cor é o seu animal?";
-    botao1.innerHTML = "Cinzento";
-    botao2.innerHTML = "Castanho";
-    botao3.innerHTML = "Verde";
-    botao1.onclick = function(){
-        escolhas[0] = "Cinzento";
-        console.log(escolhas);
-        pergunta2();
-       }
-       
-       botao2.onclick  = function(){
-        escolhas[0] = "Castanho"
-        console.log(escolhas);
-        pergunta2();
-       }
-       
-       botao3.onclick  = function(){
-       escolhas[0] = "Verde"
-       console.log(escolhas);
-       pergunta2();
-       }
-}
-function pergunta2(){
-frase.innerHTML = "Why are we here, just to suffer?";
-botao1.innerHTML = "Caralho";
-botao2.innerHTML = "Tomas";
-botao3.innerHTML = "Es *family friendly word*";
-botao1.onclick = function(){
-    escolhas[1] = "Caralho";
-    console.log(escolhas[1]);
-    pergunta3();
-   }
-   
-   botao2.onclick  = function(){
-    escolhas[1] = "Tomas"
-    console.log(escolhas[1]);
-    pergunta3();
-   }
-   
-   botao3.onclick  = function(){
-   escolhas[1] = "Es *family friendly word*"
-   console.log(escolhas[1]);
-   pergunta3();
-   }
-}
-function pergunta3(){
-    frase.innerHTML = "Who is Joe?";
-    botao1.innerHTML = "O";
-    botao2.innerHTML = "Menezes";
-    botao3.innerHTML = "É *family friendly word*";
-    botao1.onclick = function(){
-        escolhas[2] = "O";
-        console.log(escolhas[2]);
-        pergunta1();
-       }
-       
-       botao2.onclick  = function(){
-        escolhas[2] = "Menezes"
-        console.log(escolhas[2]);
-        pergunta1();
-       }
-       
-       botao3.onclick  = function(){
-       escolhas[2] = "É *family friendly word*"
-       console.log(escolhas[2]);
-       pergunta1();
-       }
-    }
-
-    //funcoes pergunta1, 2 e 3 são para chamar as perguntas e substituir a ordem destas. 
-    //tambem guardam o valor no array Escolhas[]
-    //depois metia-se um loop while(escolhas<=3) e no final apresentava um texto qualquer
-    //este texto pegava nos valores do array e substituia or something
-
-if(perguntas[perguntaescolhida] == perguntas[0])
-{
-pergunta1();
-}
-
-if(perguntas[perguntaescolhida] == perguntas[1])
-{
-pergunta2();
-}
-
-if(perguntas[perguntaescolhida] == perguntas[2])
-{
-pergunta3();
-}
-*/

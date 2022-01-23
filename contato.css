@@ -1,10 +1,9 @@
-body {
+.body {
   background-color: #100e1796;
   font-family: "Open Sans", sans-serif;
 }
 
-.container {
-  position: absolute;
+.containerContato {
   height: 300px;
   width: 600px;
   top: 150px;
@@ -12,7 +11,7 @@ body {
   display: flex;
 }
 
-.card {
+.cardContato {
   display: flex;
   height: 350px;
   width: 300px;
@@ -25,34 +24,30 @@ body {
   left: 0px;
 }
 
-.card:not(:first-child) {
+.cardContato:not(:first-child) {
   margin-left: -50px;
 }
 
-.card:hover {
+.cardContato:hover {
   transform: translateY(-20px);
   transition: 0.4s ease-out;
 }
 
-.card:hover ~ .card {
+.cardContato:hover.cardContato {
   position: relative;
   left: 50px;
   transition: 0.4s ease-out;
 }
 
-.title {
+.titleContato {
   color: white;
   font-weight: 300;
-  position: absolute;
-  left: 20px;
-  top: 15px;
+ 
 }
-.perfil {
+.perfilContato {
   height: 150px;
   width: 150px;
-  position: absolute;
-  left: 17px;
-  top: 80px;
+
 }
 #frame {
   border-radius: 25px;
@@ -62,7 +57,7 @@ body {
 .linkedin {
   height: 70px;
   width: 70px;
-  position: absolute;
+
   left: 50px;
   top: 250px;
 }
