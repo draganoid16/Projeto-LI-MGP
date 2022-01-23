@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 html{
     scroll-behavior: smooth;
 }
@@ -11,16 +10,6 @@ nav{
     width: 100vw;
     height: 10vh;
     background: rgba(133, 245, 99, 0.5);
-=======
-body {
-  font-family: "Courier New", Courier, monospace;
-}
-nav {
-  position: fixed;
-  width: 100vw;
-  height: 10vh;
-  background: rgba(4, 90, 83, 0.5);
->>>>>>> 119366e67fb09ca82602b25efc22c23d3025683b
 }
 
 .nav-item {
@@ -84,7 +73,6 @@ header > div > div {
   animation-duration: 2s; /* don't forget to set a duration! */
 }
 
-<<<<<<< HEAD
 .most-common{
     border: 1px solid brown;
     margin: 0 10vw;
@@ -96,20 +84,6 @@ header > div > div {
     margin: 2.5vh 2.5vw;
     height: 30vh;
     width: 20vw;
-=======
-.most-common {
-  border: 1px solid brown;
-  margin: 0 10vw;
-  text-align: center;
-  cursor: default;
-}
-
-.card {
-  display: inline-block;
-  margin: 0 2.5vw;
-  height: 30vh;
-  width: 20vw;
->>>>>>> 119366e67fb09ca82602b25efc22c23d3025683b
 }
 
 .card > img {
@@ -119,7 +93,6 @@ header > div > div {
   border-radius: 15px;
 }
 
-<<<<<<< HEAD
 legend{
     height: 28.5vh;
     width: 19.5vw;  
@@ -146,40 +119,6 @@ legend:hover{
     padding: 15px;
     text-align: justify;
     display: none;
-=======
-legend {
-  height: 29vh;
-  width: 20vw;
-  background: rgba(47, 49, 49, 0.2);
-  position: absolute;
-  padding-top: 10px;
-  border-radius: 15px;
-  z-index: 1;
-  font-weight: bold;
-  font-size: 2.5vh;
-}
-legend:hover {
-  background: rgba(47, 49, 49, 0.5);
-}
-.latim {
-  font-style: italic;
-  float: right;
-  margin: 10px;
-  font-size: 2vh;
-}
-.text-card {
-  font-size: 2vh;
-  padding: 15px;
-  text-align: justify;
-  display: none;
-}
-.game-section {
-  height: 80vh;
-  border: 1px solid rgb(42, 165, 79);
-  margin: 3vh 10vw;
-  text-align: center;
-  cursor: default;
->>>>>>> 119366e67fb09ca82602b25efc22c23d3025683b
 }
 
 .about-us {
