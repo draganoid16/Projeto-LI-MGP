@@ -61,7 +61,7 @@ function pergunta2() {
 
     console.log(escolhas);
 
-    document.getElementById("tituloprincipal").style.display = "none";
+    //document.getElementById("tituloprincipal").style.display = "none";
     document.getElementById("textofinal").style.display = "none";
     document.getElementById("pergunta1").style.display = "none";
 
