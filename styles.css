@@ -1,11 +1,15 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Courier New', Courier, monospace;
+    margin: 0;    
 }
 nav{
     position: fixed;
     width: 100vw;
     height: 10vh;
-    background: rgba(4, 90, 83, 0.5);
+    background: rgba(133, 245, 99, 0.5);
 }
 
 .nav-item{
@@ -72,13 +76,12 @@ header > div > div{
 .most-common{
     border: 1px solid brown;
     margin: 0 10vw;
-    text-align: center;
     cursor: default;
 }
 
 .card{
     display: inline-block;
-    margin: 0 2.5vw;
+    margin: 2.5vh 2.5vw;
     height: 30vh;
     width: 20vw;
 }
@@ -91,18 +94,19 @@ header > div > div{
 }
 
 legend{
-    height: 29vh;
-    width: 20vw;  
+    height: 28.5vh;
+    width: 19.5vw;  
     background: rgba(47, 49, 49, 0.2);
     position: absolute;
-    padding-top: 10px; 
+    padding-top: 15px;
+    padding-left: 10px; 
     border-radius: 15px;
     z-index: 1;
     font-weight: bold;
     font-size: 2.5vh;
 }
 legend:hover{
-    background: rgba(47, 49, 49, 0.5);
+    background: rgba(136, 133, 133, 0.5);
 }
 .latim{
     font-style: italic;

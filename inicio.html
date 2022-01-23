@@ -14,9 +14,9 @@
 
 
 </head>
-<body style="margin: 0;"> <!-- Importante-->
+<body>
     <header>
-        <nav>
+        <nav id="headerline">
             <a class="nav-item" href="#">Inicio</a>
             <a class="nav-item" href="#most-common">Répteis mais comuns</a>
             <a class="nav-item">Jogo</a>
@@ -39,34 +39,67 @@
 
     <section id="most-common" class="most-common">
         <h1>Répteis mais comuns no nosso território</h1>
-        <div class="card" onmouseover="show_text(0)" onmouseout="hide_text(0)">
-            <legend>Cágado-mediterrânico<br><span class="latim">Mauremys leprosa</span><br>
-                <p class="text-card">É um cágado da família Geoemydidae. Está presente na Península Ibérica e Sul de França, no Norte de África (Marrocos, Argélia e Tunísia). Anteriormente, estava incluído na espécie Mauremys caspica.</p>
-            </legend>
-            <img src="cagado.jpg">
+        <div class="animate__animated animate__fadeInUp">
+            <div class="card" onmouseover="show_text(0)" onmouseout="hide_text(0)">
+                <legend>Cágado-mediterrânico<br><span class="latim">Mauremys leprosa</span><br>
+                    <p class="text-card">É um cágado da família Geoemydidae. Está presente na Península Ibérica e Sul de França, no Norte de África (Marrocos, Argélia e Tunísia). Anteriormente, estava incluído na espécie Mauremys caspica.</p>
+                </legend>
+                <img src="cagado.jpg">
+            </div>
+            <div class="card" onmouseover="show_text(1)" onmouseout="hide_text(1)">
+                <legend>Camaleão-comum<br><span class="latim">Chamaeleo chamaeleon</span><br>
+                    <p class="text-card">Juntamente com o camaleão-africano é única espécie da família Chamaeleonidae presente na Europa. Alimenta-se de insetos, especialmente gafanhotos.</p>
+                </legend>
+                <img src="camaleao.jpg">
+            </div>
+            <div class="card" onmouseover="show_text(2)" onmouseout="hide_text(2)">
+                <legend>Tartaruga-comum<br><span class="latim">Caretta caretta</span><br>
+                    <p class="text-card">É uma espécie de tartaruga marinha pertencente à família Cheloniidae. Habita no oceano Atlântico, Pacífico e Índico, e no Mediterrâneo. Actualmente é a única espécie do género Caretta.</p>
+                </legend>
+                <img src="tartaruga.jpg">
+            </div>
         </div>
-        <div class="card" onmouseover="show_text(1)" onmouseout="hide_text(1)">
-            <legend>Camaleão-comum<br><span class="latim">Chamaeleo chamaeleon</span><br>
-                <p class="text-card">Juntamente com o camaleão-africano é única espécie da família Chamaeleonidae presente na Europa. Alimenta-se de insetos, especialmente gafanhotos.</p>
-            </legend>
-            <img src="camaleao.jpg">
-        </div>
-        <div class="card" onmouseover="show_text(2)" onmouseout="hide_text(2)">
-            <legend>Tartaruga-comum<br><span class="latim">Caretta caretta</span><br>
-                <p class="text-card">É uma espécie de tartaruga marinha pertencente à família Cheloniidae. Habita no oceano Atlântico, Pacífico e Índico, e no Mediterrâneo. Actualmente é a única espécie do género Caretta.</p>
-            </legend>
-            <img src="tartaruga.jpg">
+        <div class="animate__animated animate__fadeInUp"></divclass>
+            <div class="card" onmouseover="show_text(3)" onmouseout="hide_text(3)">
+                <legend>Sardão<br><span class="latim">Timom lepidus</span><br>
+                    <p class="text-card">Chega a viver 25 anos em cativeiro. Quando confrontado, abre a boca e sibila, conseguindo mesmo saltar para o inimigo.</p>
+                </legend>
+                <img src="sardao.jpg">
+            </div>
+            <div class="card" onmouseover="show_text(4)" onmouseout="hide_text(4)">
+                <legend>Cobra-de-pernas-pentadáctila<br><span class="latim">Chalcides bedriagai</span><br>
+                    <p class="text-card">É uma espécie da família Scincidae encontrada na Península Ibérica. Normalmente vive em áreas arenosas com vegetação parca e boa cobertura no solo.</p>
+                </legend>
+                <img src="cobra.jpg">
+            </div>
+            <div class="card" onmouseover="show_text(5)" onmouseout="hide_text(5)">
+                <legend>Osga-turca<br><span class="latim">Hemidactylus turcicus</span><br>
+                    <p class="text-card">São animais nocturnos e insectívoros, raramente excedendo os 15 centimetros, e têm olhos grandes e sem pálpebras, muitas vezes com riscas na cauda. As suas barrigas são algo translúcidas.</p>
+                </legend>
+                <img src="osga.jpg">
+            </div>
         </div>
     </section>
 
-    <script>
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script><script>
         const text_card = document.getElementsByClassName("text-card");
         function show_text(i){
-            text_card[i].style.display ="inline";
+            text_card[i].style.display ="block";
         }
         function hide_text(i){
             text_card[i].style.display ="none";
         }
+
+        $(document).scroll(function() {
+            if($(window).scrollTop() > 50){
+                $("#headerline").css("background","rgba(133, 245, 99, 1.0");
+
+            }else if($(window).scrollTop() < 50){
+                $("#headerline").css("background","rgba(133, 245, 99, 0.5");
+            }
+        });
     </script>
+
 </body>
 </html>
