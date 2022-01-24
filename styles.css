@@ -190,3 +190,13 @@ legend:hover{
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(86, 121, 100);
 }
+
+.game{
+  border: 1px solid brown;
+  margin: 2vh 10vw;
+  cursor: default;
+}
+
+.game-box{
+  padding: 0 10vw;
+}
