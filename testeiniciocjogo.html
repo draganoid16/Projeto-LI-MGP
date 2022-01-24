@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="gamestyle2.css" />
     <!-- Adiciona as animações -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Para o icones no menu-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
@@ -23,8 +25,9 @@
         <nav id="headerline">
             <a class="nav-item" href="#">Inicio</a>
             <a class="nav-item" href="#most-common">Répteis mais comuns</a>
-            <a class="nav-item" href="game.html">Jogos</a>
+            <a class="nav-item" href="#game">Jogos</a>
             <a class="nav-item">Sobre nós</a>
+            <a onclick="show_menu()" class="nav-icon"><span class="fa fa-bars"></span></a>
         </nav>
         <div>
             <img src="https://i.pinimg.com/originals/d4/3a/46/d43a46294ee0d0831a9a8b4177f5da9f.jpg">
@@ -88,7 +91,7 @@
 
     </section >
 
-    <section class="game">
+    <section id="game" class="game">
         <h1>Jogo - Identificação de répteis.</h1>
         <div class="game-box">
             <div class="choice1">
@@ -182,7 +185,6 @@
       </div>
     </div>
   </div>
-
     </section>
 
     <!--jquery-->
@@ -207,7 +209,29 @@
             }
         });
 
+        // Navbar responsive
+        function show_menu(){
+          var x = document.getElementsByClassName("nav-item")[1];
+          if (x.style.display === "none") {
+            document.getElementsByTagName("nav")[0].style.height = "40vh";
+            const nav_item = document.getElementsByClassName("nav-item");
+            for (let i=1; i<nav_item.length; i++){
+              nav_item[i].style.display = "block";
+            }
+            
+          } else {
+            document.getElementsByTagName("nav")[0].style.height = "10vh";
+            const nav_item = document.getElementsByClassName("nav-item");
+            for (let i=1; i<nav_item.length; i++){
+              nav_item[i].style.display = "none";
+            }            
+          }
+      }
     </script>
+
+<script>
+
+  </script>
     <!-- Javascript para o jogo-->
     <script src="script.js"></script>
 </body>

@@ -200,3 +200,24 @@ legend:hover{
 .game-box{
   padding: 0 10vw;
 }
+
+.nav-icon{
+  display: none;
+  line-height: 10vh;
+  padding: 0 0.5vw;
+  font-size: 3vh;
+  text-decoration: none;
+  color: black;
+  z-index: 50;
+}
+@media screen and (max-width: 700px) {
+  #headerline a:not(:first-child) {display: none;}
+  #headerline a.nav-icon {
+    position: absolute;
+    top: 0;
+    right: 5vw;
+    display: inline;
+    cursor: pointer;
+  }
+  
+}
