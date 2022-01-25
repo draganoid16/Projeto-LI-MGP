@@ -382,6 +382,7 @@ legend:hover {
 .animal_description {
   display: none;
   text-align: justify;
+  padding: 1px;
 }
 
 .latim {
