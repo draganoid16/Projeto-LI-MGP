@@ -21,7 +21,17 @@
 
 </head>
 <body>
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Inicio</a>
+    <a href="#most-common">Répteis mais comuns</a>
+    <a href="#game">Jogo</a>
+    <a href="#about">Sobre nós</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
     <header>
+        <!--
         <nav id="headerline">
             <a class="nav-item" href="#">Inicio</a>
             <a class="nav-item" href="#most-common">Répteis mais comuns</a>
@@ -29,6 +39,7 @@
             <a class="nav-item">Sobre nós</a>
             <a onclick="show_menu()" class="nav-icon"><span class="fa fa-bars"></span></a>
         </nav>
+      -->
         <div>
             <img src="https://i.pinimg.com/originals/d4/3a/46/d43a46294ee0d0831a9a8b4177f5da9f.jpg">
             <!--
@@ -227,11 +238,16 @@
             }            
           }
       }
+
+      function myFunction() {
+      var y = document.getElementById("myTopnav");
+      if (y.className === "topnav") {
+        y.className += " responsive";
+      } else {
+        y.className = "topnav";
+      }
+}
     </script>
-
-<script>
-
-  </script>
     <!-- Javascript para o jogo-->
     <script src="script.js"></script>
 </body>

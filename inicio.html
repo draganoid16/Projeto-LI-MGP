@@ -1,174 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Repteis de Portugal</title>
-    <!-- Icone ao lado do titulo -->
-    <link
-      rel="icon"
-      href="https://cdn-icons-png.flaticon.com/512/47/47371.png"
-    />
-    <!-- Adiciona o CSS-->
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Adiciona as animações -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repteis de Portugal</title>
+  <!-- Icone ao lado do titulo -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/47/47371.png" />
+  <!-- Adiciona o CSS-->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Adiciona as animações -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
 </head>
+
 <body>
-    <header>
-        <nav id="headerline">
-            <a class="nav-item" href="#">Inicio</a>
-            <a class="nav-item" href="#most-common">Répteis mais comuns</a>
-            <a class="nav-item" href="game.html">Jogos</a>
-            <a class="nav-item">Sobre nós</a>
-        </nav>
-        <div>
-            <img src="https://i.pinimg.com/originals/d4/3a/46/d43a46294ee0d0831a9a8b4177f5da9f.jpg">
-            <!--
+  <header>
+    <nav id="headerline">
+      <a class="nav-item" href="#">Inicio</a>
+      <a class="nav-item" href="#most-common">Répteis mais comuns</a>
+      <a class="nav-item" href="game.html">Jogos</a>
+      <a class="nav-item">Sobre nós</a>
+    </nav>
+    <div>
+      <img src="https://i.pinimg.com/originals/d4/3a/46/d43a46294ee0d0831a9a8b4177f5da9f.jpg">
+      <!--
             <img src="https://cdn1.epicgames.com/ue/product/Screenshot/OlbertsLowPolySwampScreenshot06-1920x1080-bd03ed1fcc0cef1c1f217eda92397353.png?resize=1&w=1920">
             -->
-        <div>
-          <span class="middle-text">Répteis de Portugal</span>
-        </div>
+      <div>
+        <span class="middle-text">Répteis de Portugal</span>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <section class="biologist-box">
-      Apesar de portugal ser um pais pequeno, existe uma grande variedade de
-      espécies de répteis que podem avistadas!
-    </section>
+  <section class="biologist-box">
+    Apesar de portugal ser um pais pequeno, existe uma grande variedade de
+    espécies de répteis que podem avistadas!
+  </section>
 
-    <section id="most-common" class="most-common">
-        <h1>Répteis mais comuns no nosso território</h1>
-        <div class="animate__animated animate__fadeInUp">
-            <div class="cardAnimal" onmouseover="show_text(0)" onmouseout="hide_text(0)">
-                <legend>Cágado-mediterrânico<br><span class="latim">Mauremys leprosa</span><br>
-                    <p class="text-card">É um cágado da família Geoemydidae. Está presente na Península Ibérica e Sul de França, no Norte de África (Marrocos, Argélia e Tunísia). Anteriormente, estava incluído na espécie Mauremys caspica.</p>
-                </legend>
-                <img src="resources/cagado.jpg">
-            </div>
-            <div class="cardAnimal" onmouseover="show_text(1)" onmouseout="hide_text(1)">
-                <legend>Camaleão-comum<br><span class="latim">Chamaeleo chamaeleon</span><br>
-                    <p class="text-card">Juntamente com o camaleão-africano é única espécie da família Chamaeleonidae presente na Europa. Alimenta-se de insetos, especialmente gafanhotos.</p>
-                </legend>
-                <img src="resources/camaleao.jpg">
-            </div>
-            <div class="cardAnimal" onmouseover="show_text(2)" onmouseout="hide_text(2)">
-                <legend>Tartaruga-comum<br><span class="latim">Caretta caretta</span><br>
-                    <p class="text-card">É uma espécie de tartaruga marinha pertencente à família Cheloniidae. Habita no oceano Atlântico, Pacífico e Índico, e no Mediterrâneo. Actualmente é a única espécie do género Caretta.</p>
-                </legend>
-                <img src="resources/tartaruga.jpg">
-            </div>
-        </div>
-        <div class="animate__animated animate__fadeInUp"></divclass>
-            <div class="cardAnimal" onmouseover="show_text(3)" onmouseout="hide_text(3)">
-                <legend>Sardão<br><span class="latim">Timom lepidus</span><br>
-                    <p class="text-card">Chega a viver 25 anos em cativeiro. Quando confrontado, abre a boca e sibila, conseguindo mesmo saltar para o inimigo.</p>
-                </legend>
-                <img src="resources/sardao.jpg">
-            </div>
-            <div class="cardAnimal" onmouseover="show_text(4)" onmouseout="hide_text(4)">
-                <legend>Cobra-de-pernas-pentadáctila<br><span class="latim">Chalcides bedriagai</span><br>
-                    <p class="text-card">É uma espécie da família Scincidae encontrada na Península Ibérica. Normalmente vive em áreas arenosas com vegetação parca e boa cobertura no solo.</p>
-                </legend>
-                <img src="resources/cobra.jpg">
-            </div>
-            <div class="cardAnimal" onmouseover="show_text(5)" onmouseout="hide_text(5)">
-                <legend>Osga-turca<br><span class="latim">Hemidactylus turcicus</span><br>
-                    <p class="text-card">São animais nocturnos e insectívoros, raramente excedendo os 15 centimetros, e têm olhos grandes e sem pálpebras, muitas vezes com riscas na cauda. As suas barrigas são algo translúcidas.</p>
-                </legend>
-                <img src="resources/osga.jpg">
-            </div>
-        </div>
+  <section id="most-common" class="most-common">
+    <h1>Répteis mais comuns no nosso território</h1>
+    <div class="animate__animated animate__fadeInUp">
+      <div class="cardAnimal" onmouseover="show_text(0)" onmouseout="hide_text(0)">
+        <legend>Cágado-mediterrânico<br><span class="latim">Mauremys leprosa</span><br>
+          <p class="text-card">É um cágado da família Geoemydidae. Está presente na Península Ibérica e Sul de França,
+            no Norte de África (Marrocos, Argélia e Tunísia). Anteriormente, estava incluído na espécie Mauremys
+            caspica.</p>
+        </legend>
+        <img src="resources/cagado.jpg">
       </div>
-      <div class="bottom-footer">
-        <p class="footer-title" id="copyright">&copy 2022</p>
+      <div class="cardAnimal" onmouseover="show_text(1)" onmouseout="hide_text(1)">
+        <legend>Camaleão-comum<br><span class="latim">Chamaeleo chamaeleon</span><br>
+          <p class="text-card">Juntamente com o camaleão-africano é única espécie da família Chamaeleonidae presente na
+            Europa. Alimenta-se de insetos, especialmente gafanhotos.</p>
+        </legend>
+        <img src="resources/camaleao.jpg">
       </div>
-    </section >
+      <div class="cardAnimal" onmouseover="show_text(2)" onmouseout="hide_text(2)">
+        <legend>Tartaruga-comum<br><span class="latim">Caretta caretta</span><br>
+          <p class="text-card">É uma espécie de tartaruga marinha pertencente à família Cheloniidae. Habita no oceano
+            Atlântico, Pacífico e Índico, e no Mediterrâneo. Actualmente é a única espécie do género Caretta.</p>
+        </legend>
+        <img src="resources/tartaruga.jpg">
+      </div>
+    </div>
+    <div class="animate__animated animate__fadeInUp">
+      </divclass>
+      <div class="cardAnimal" onmouseover="show_text(3)" onmouseout="hide_text(3)">
+        <legend>Sardão<br><span class="latim">Timom lepidus</span><br>
+          <p class="text-card">Chega a viver 25 anos em cativeiro. Quando confrontado, abre a boca e sibila, conseguindo
+            mesmo saltar para o inimigo.</p>
+        </legend>
+        <img src="resources/sardao.jpg">
+      </div>
+      <div class="cardAnimal" onmouseover="show_text(4)" onmouseout="hide_text(4)">
+        <legend>Cobra-de-pernas-pentadáctila<br><span class="latim">Chalcides bedriagai</span><br>
+          <p class="text-card">É uma espécie da família Scincidae encontrada na Península Ibérica. Normalmente vive em
+            áreas arenosas com vegetação parca e boa cobertura no solo.</p>
+        </legend>
+        <img src="resources/cobra.jpg">
+      </div>
+      <div class="cardAnimal" onmouseover="show_text(5)" onmouseout="hide_text(5)">
+        <legend>Osga-turca<br><span class="latim">Hemidactylus turcicus</span><br>
+          <p class="text-card">São animais nocturnos e insectívoros, raramente excedendo os 15 centimetros, e têm olhos
+            grandes e sem pálpebras, muitas vezes com riscas na cauda. As suas barrigas são algo translúcidas.</p>
+        </legend>
+        <img src="resources/osga.jpg">
+      </div>
+    </div>
+    </div>
+    <div class="bottom-footer">
+      <p class="footer-title" id="copyright">&copy 2022</p>
+    </div>
+  </section>
 
-    
 
 
 
-    <section class="contatos-footer">
+
+  <section class="contatos-footer">
     <link rel="stylesheet" href="contato.css" />
 
-   <div class="body">
-    <div class="contato">
-      <h1>Contatos</h1>
-    </div>
-    <div class="containerContato">
-      <div class="cardContato">
-        <h3 class="titleContato">Gonçalo Menezes</h3>
-        <div>
-          <img id="frame" class="perfilContato" src="resources/goncalo.jpg" alt="Foto">
-          <a href="https://www.linkedin.com/in/gon%C3%A7alomenezes/"
-              ><img class="linkedin" src="resources/linkedin-logo.png" alt="linkedin" href="https://www.linkedin.com/in/gonçalomenezes/">
-        </a>
-        </div>
-        
+    <div class="body">
+      <div class="contato">
+        <h1>Contatos</h1>
       </div>
-      <div class="cardContato">
-        <h3 class="titleContato">João Coelho</h3>
-        <div c>
-          <img id="frame" class="perfilContato" src="resources/joao.jpg" alt="Foto">
-          <a href="https://www.linkedin.com/in/jo%C3%A3o-coelho-b24908156/"
-              ><img  class="linkedin" src="resources/linkedin-logo.png" alt="linkedin">
-              </a>
-        </div>
-        
-      </div>
-      <div class="cardContato">
-        <h3 class="titleContato">Murilo Amado</h3>
-        <div>
-          <img id="frame" class="perfilContato" src="resources/murilo.jpg" alt="Foto">
-          <a href="https://www.linkedin.com/in/murilo-amado-47b7a4144/"
-              ><img class="linkedin" src="resources/linkedin-logo.png" alt="linkedin">
+      <div class="containerContato">
+        <div class="cardContato">
+          <h3 class="titleContato">Gonçalo Menezes</h3>
+          <div>
+            <img id="frame" class="perfilContato" src="resources/goncalo.jpg" alt="Foto">
+            <a href="https://www.linkedin.com/in/gon%C3%A7alomenezes/"><img class="linkedin"
+                src="resources/linkedin-logo.png" alt="linkedin" href="https://www.linkedin.com/in/gonçalomenezes/">
             </a>
+          </div>
+
         </div>
-        
-      </div>
-      <div class="cardContato">
-        <h3 class="titleContato">Tomás Rosa</h3>
-        <div>
-          <img id="frame" class="perfilContato" src="resources/tomas.jpg" alt="Foto">
-          <a
-              href="https://www.linkedin.com/in/tom%C3%A1s-paix%C3%A3o-rosa-434628228/"
-              ><img class="linkedin" src="resources/linkedin-logo.png" alt="linkedin">
-              </a>
+        <div class="cardContato">
+          <h3 class="titleContato">João Coelho</h3>
+          <div c>
+            <img id="frame" class="perfilContato" src="resources/joao.jpg" alt="Foto">
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-coelho-b24908156/"><img class="linkedin"
+                src="resources/linkedin-logo.png" alt="linkedin">
+            </a>
+          </div>
+
+        </div>
+        <div class="cardContato">
+          <h3 class="titleContato">Murilo Amado</h3>
+          <div>
+            <img id="frame" class="perfilContato" src="resources/murilo.jpg" alt="Foto">
+            <a href="https://www.linkedin.com/in/murilo-amado-47b7a4144/"><img class="linkedin"
+                src="resources/linkedin-logo.png" alt="linkedin">
+            </a>
+          </div>
+
+        </div>
+        <div class="cardContato">
+          <h3 class="titleContato">Tomás Rosa</h3>
+          <div>
+            <img id="frame" class="perfilContato" src="resources/tomas.jpg" alt="Foto">
+            <a href="https://www.linkedin.com/in/tom%C3%A1s-paix%C3%A3o-rosa-434628228/"><img class="linkedin"
+                src="resources/linkedin-logo.png" alt="linkedin">
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-    </section>
+  </section>
 
-    <!--jquery-->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    
-    <script>
-        //Mostrar o texto dos repteis comuns
-        const text_card = document.getElementsByClassName("text-card");
-        function show_text(i){
-            text_card[i].style.display ="block";
-        }
-        function hide_text(i){
-            text_card[i].style.display ="none";
-        }
-        //Muda o background da navbar com o scroll
-        $(document).scroll(function() {
-            if($(window).scrollTop() > 50){
-                $("#headerline").css("background","rgba(133, 245, 99, 1.0");
+  <!--jquery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
 
-            }else if($(window).scrollTop() < 50){
-                $("#headerline").css("background","rgba(133, 245, 99, 0.5");
-            }
-        });
+  <script>
+    //Mostrar o texto dos repteis comuns
+    const text_card = document.getElementsByClassName("text-card");
+    function show_text(i) {
+      text_card[i].style.display = "block";
+    }
+    function hide_text(i) {
+      text_card[i].style.display = "none";
+    }
+    //Muda o background da navbar com o scroll
+    $(document).scroll(function () {
+      if ($(window).scrollTop() > 50) {
+        $("#headerline").css("background", "rgba(133, 245, 99, 1.0");
 
-    </script>
+      } else if ($(window).scrollTop() < 50) {
+        $("#headerline").css("background", "rgba(133, 245, 99, 0.5");
+      }
+    });
+
+  </script>
 
 </body>
+
 </html>
