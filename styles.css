@@ -55,9 +55,13 @@ header > div > div {
 .most-common {
   border: 1px solid brown;
   margin: 0 10vw;
+  padding-bottom: 5vh;
   cursor: default;
 }
 
+#line1-most-common, #line2-most-common{
+  text-align: center;
+}
 .cardAnimal {
   display: inline-block;
   margin: 2.5vh 2.5vw;
@@ -250,9 +254,6 @@ legend:hover {
 }
 
 @media screen and (max-width: 1400px) {
-  legend {
-    color: green;
-  }
   .text-card {
     font-size: 1.8vh;
   }
@@ -260,28 +261,49 @@ legend:hover {
 
 @media screen and (max-width: 1200px) {
   legend {
-    height: 28.5vh;
-    width: 19.2vw;
-    color: red;
+    height: 36.5vh;
+    width: 32.5vw;
+    margin-left: 22.5vw;
+    margin-right: 22.5vw;
   }
   .text-card {
-    font-size: 1.6vh;
+    font-size: 2.2vh;
+  }
+  .cardAnimal{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7vh;
+  }
+  .cardAnimal > img {
+    height: 38vh;
+    width: 33vw;
   }
 }
 
 @media screen and (max-width: 1000px) {
   legend {
-    height: 28.5vh;
-    width: 19.2vw;
-    color: blue;
+    height: 36.5vh;
+    width: 44vw;
+    margin-left: 15.5vw;
+    margin-right: 16.5vw;
+    color: red;
+    min-width: 290px;
   }
   .text-card {
-    font-size: 1.6vh;
+    font-size: 2.2vh;
   }
-  .cardAnimal {
+  .cardAnimal{
     display: block;
-    margin: 2.5vh 2.5vw;
-    height: 30vh;
-    width: 20vw;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5vh 0;
+  }
+  .cardAnimal > img {
+    height: 38vh;
+    width: 45vw;
+    min-width: 290px;
   }
 }
