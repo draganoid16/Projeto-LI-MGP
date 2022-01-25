@@ -73,7 +73,7 @@
 .botao_style1:hover,
 .botao_style2:hover,
 .botao_style3:hover {
-  color: aliceblue;
+  color: rgb(255, 255, 255);
 }
 #botao_castanho {
   background-color: rgb(87, 53, 37);
@@ -109,7 +109,8 @@
 }
 .botao_reset:hover,
 .botao_anterior:hover {
-  color: white;
+  color: rgb(15, 54, 54);
+  text-decoration: underline;
 }
 .botao_anterior {
   border: 3px dashed rgb(0, 0, 0);

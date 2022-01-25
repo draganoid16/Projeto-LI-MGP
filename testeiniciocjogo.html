@@ -14,13 +14,17 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="gamestyle2.css" />
     <!-- Adiciona as animações -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- Para o icones no menu-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <!-- Nav bar -->
     <div class="topnav" id="myTopnav">
       <a href="#header" class="active">Inicio</a>
@@ -32,7 +36,7 @@
       </a>
     </div>
     <header id="header">
-        <!--
+      <!--
         <nav id="headerline">
             <a class="nav-item" href="#">Inicio</a>
             <a class="nav-item" href="#most-common">Répteis mais comuns</a>
@@ -41,9 +45,11 @@
             <a onclick="show_menu()" class="nav-icon"><span class="fa fa-bars"></span></a>
         </nav>
       -->
-        <div>
-            <img src="https://i.pinimg.com/originals/d4/3a/46/d43a46294ee0d0831a9a8b4177f5da9f.jpg">
-            <!--
+      <div>
+        <img
+          src="https://i.pinimg.com/originals/d4/3a/46/d43a46294ee0d0831a9a8b4177f5da9f.jpg"
+        />
+        <!--
             <img src="https://cdn1.epicgames.com/ue/product/Screenshot/OlbertsLowPolySwampScreenshot06-1920x1080-bd03ed1fcc0cef1c1f217eda92397353.png?resize=1&w=1920">
             -->
         <div>
@@ -58,7 +64,84 @@
     </section>
 
     <section id="most-common" class="most-common">
-        <h1>Répteis mais comuns no nosso território</h1>
+      <h1 class="titulo_most_common">
+        Répteis mais comuns no nosso território
+      </h1>
+      <div class="most-common-container">
+        <div
+          class="cagado"
+          onmouseover="show_text(0)"
+          onmouseout="hide_text(0)"
+        >
+          <h3>Cágado-mediterrânico</h3>
+          <span class="latim">Mauremys leprosa</span>
+          <p class="animal_description">
+            É um cágado da família Geoemydidae. Está presente na Península
+            Ibérica e Sul de França, no Norte de África (Marrocos, Argélia e
+            Tunísia). Anteriormente, estava incluído na espécie Mauremys
+            caspica.
+          </p>
+        </div>
+        <div
+          class="camaleao"
+          onmouseover="show_text(1)"
+          onmouseout="hide_text(1)"
+        >
+          <h3>Camaleão-comum</h3>
+          <span class="latim">Chamaeleo chamaeleon</span>
+          <p class="animal_description">
+            Juntamente com o camaleão-africano é única espécie da família
+            Chamaeleonidae presente na Europa. Alimenta-se de insetos,
+            especialmente gafanhotos.
+          </p>
+        </div>
+        <div
+          class="tartaruga"
+          onmouseover="show_text(2)"
+          onmouseout="hide_text(2)"
+        >
+          <h3>Tartaruga-comum</h3>
+          <span class="latim">Caretta caretta</span>
+          <p class="animal_description">
+            É uma espécie de tartaruga marinha pertencente à família
+            Cheloniidae. Habita no oceano Atlântico, Pacífico e Índico, e no
+            Mediterrâneo. Actualmente é a única espécie do género Caretta.
+          </p>
+        </div>
+        <div
+          class="sardao"
+          onmouseover="show_text(3)"
+          onmouseout="hide_text(3)"
+        >
+          <h3>Sardão</h3>
+          <span class="latim">Timom lepidus</span>
+          <p class="animal_description">
+            Chega a viver 25 anos em cativeiro. Quando confrontado, abre a boca
+            e sibila, conseguindo mesmo saltar para o inimigo.
+          </p>
+        </div>
+        <div class="cobra" onmouseover="show_text(4)" onmouseout="hide_text(4)">
+          <h3>Cobra-de-pernas-pentadáctila</h3>
+          <span class="latim">Chalcides bedriagai</span>
+          <p class="animal_description">
+            É uma espécie da família Scincidae encontrada na Península Ibérica.
+            Normalmente vive em áreas arenosas com vegetação parca e boa
+            cobertura no solo.
+          </p>
+        </div>
+        <div class="osga" onmouseover="show_text(5)" onmouseout="hide_text(5)">
+          <h3>Osga-turca</h3>
+          <span class="latim">Hemidactylus turcicus</span>
+          <p class="animal_description">
+            São animais nocturnos e insectívoros, raramente excedendo os 15
+            centimetros, e têm olhos grandes e sem pálpebras, muitas vezes com
+            riscas na cauda. As suas barrigas são algo translúcidas.
+          </p>
+        </div>
+      </div>
+      <!-- isto é para apagar e apagar tambem as classes
+
+        
         <div id="line1-most-common" class="animate__animated animate__fadeInUp">
             <div class="cardAnimal" onmouseover="show_text(0)" onmouseout="hide_text(0)">
                 <legend>Cágado-mediterrânico<br><span class="latim">Mauremys leprosa</span><br>
@@ -100,153 +183,206 @@
             </div>
         </div>
       </div>
-
-    </section >
+      -->
+    </section>
 
     <section id="game" class="game">
-        <h1 class="page-header">Jogo - Identificação de répteis.</h1>
-        <div class="game-box">
-            <div class="choice1">
-              <p class="pergunta_style" id="pergunta1"></p>
-              <button class="botao_style1" id="botao_castanho"></button>
-              <button class="botao_style2" id="botao_verde"></button>
-              <button class="botao_style3" id="botao_cinzento"></button>
-              <p id="textofinal">Dados Guardados:</p>
-              <div class="container_botao">
-              <button class="botao_reset" >Reset</button>
-            </div>
-            <div class="container_botao_anterior">
-              <button class="botao_anterior" >Pergunta anterior</button>
-            </div>
-            </div>
-
-            <div class="choice">
-              <div class="animal-escolhido" id="cagado">
-                <img src="resources/cagado.jpg" alt="cagado" />
-                <p>
-                  <a href="https://pt.wikipedia.org/wiki/C%C3%A1gado-mediterr%C3%A2nico" target="_blank">
-                      Your animal is a Cagado!</a>
-                </p>
-
-              </div>
-              <div class="animal-escolhido"  id="osga-moura">
-                <img class="animal-escolhido" src="resources/osga-moura.jpg" alt="osga-moura" />
-                <p>
-                  <a href="https://pt.wikipedia.org/wiki/Osga-moura" target="_blank">
-                      Your animal is a Osga-Moura!</a>
-                </p>
-              </div>
-      
-              <div class="animal-escolhido" id="camaleão">
-                <img src="resources/camaleao.jpg" alt="camaleao" width="500vw" />
-                <p>
-                  <a href="https://pt.wikipedia.org/wiki/Camale%C3%A3o" target="_blank">
-                      Your animal is a Camaleão!</a>
-                </p>
-              </div>
-            </div>
+      <h1 class="page-header">Jogo - Identificação de répteis.</h1>
+      <div class="game-box">
+        <div class="choice1">
+          <p class="pergunta_style" id="pergunta1"></p>
+          <button class="botao_style1" id="botao_castanho"></button>
+          <button class="botao_style2" id="botao_verde"></button>
+          <button class="botao_style3" id="botao_cinzento"></button>
+          <p id="textofinal">Dados Guardados:</p>
+          <div class="container_botao">
+            <button class="botao_reset">Reset</button>
           </div>
+          <div class="container_botao_anterior">
+            <button class="botao_anterior">Pergunta anterior</button>
+          </div>
+        </div>
+
+        <div class="choice">
+          <div class="animal-escolhido" id="cagado">
+            <img src="resources/cagado.jpg" alt="cagado" />
+            <p>
+              <a
+                href="https://pt.wikipedia.org/wiki/C%C3%A1gado-mediterr%C3%A2nico"
+                target="_blank"
+              >
+                Your animal is a Cagado!</a
+              >
+            </p>
+          </div>
+          <div class="animal-escolhido" id="osga-moura">
+            <img
+              class="animal-escolhido"
+              src="resources/osga-moura.jpg"
+              alt="osga-moura"
+            />
+            <p>
+              <a
+                href="https://pt.wikipedia.org/wiki/Osga-moura"
+                target="_blank"
+              >
+                Your animal is a Osga-Moura!</a
+              >
+            </p>
+          </div>
+
+          <div class="animal-escolhido" id="camaleão">
+            <img src="resources/camaleao.jpg" alt="camaleao" width="500vw" />
+            <p>
+              <a
+                href="https://pt.wikipedia.org/wiki/Camale%C3%A3o"
+                target="_blank"
+              >
+                Your animal is a Camaleão!</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
     <div class="bottom-footer">
-        <p class="footer-title" id="copyright">&copy 2022</p>
-      </div>
-
-
+      <p class="footer-title" id="copyright">&copy 2022</p>
+    </div>
 
     <section class="c">
-    <link rel="stylesheet" href="contato.css" />
+      <link rel="stylesheet" href="contato.css" />
 
-   <div class="body">
-    <div class="contato">
-      <h1>Contatos</h1>
-    </div>
-    <div class="containerContato">
-      <div class="cardContato">
-        <h3 class="titleContato">Gonçalo Menezes</h3>
-        <div>
-          <img id="frame" class="perfilContato" src="resources/goncalo.jpg" alt="Foto">
-          <a href="https://www.linkedin.com/in/gon%C3%A7alomenezes/"
-              ><img class="linkedin" src="resources/linkedin-logo.png" alt="linkedin" href="https://www.linkedin.com/in/gonçalomenezes/">
-        </a>
+      <div class="body">
+        <div class="contato">
+          <h1>Contatos</h1>
         </div>
-        
-      </div>
-      <div class="cardContato">
-        <h3 class="titleContato">João Coelho</h3>
-        <div c>
-          <img id="frame" class="perfilContato" src="resources/joao.jpg" alt="Foto">
-          <a href="https://www.linkedin.com/in/jo%C3%A3o-coelho-b24908156/"
-              ><img  class="linkedin" src="resources/linkedin-logo.png" alt="linkedin">
+        <div class="containerContato">
+          <div class="cardContato">
+            <h3 class="titleContato">Gonçalo Menezes</h3>
+            <div>
+              <img
+                id="frame"
+                class="perfilContato"
+                src="resources/goncalo.jpg"
+                alt="Foto"
+              />
+              <a href="https://www.linkedin.com/in/gon%C3%A7alomenezes/"
+                ><img
+                  class="linkedin"
+                  src="resources/linkedin-logo.png"
+                  alt="linkedin"
+                  href="https://www.linkedin.com/in/gonçalomenezes/"
+                />
               </a>
-        </div>
-        
-      </div>
-      <div class="cardContato">
-        <h3 class="titleContato">Murilo Amado</h3>
-        <div>
-          <img id="frame" class="perfilContato" src="resources/murilo.jpg" alt="Foto">
-          <a href="https://www.linkedin.com/in/murilo-amado-47b7a4144/"
-              ><img class="linkedin" src="resources/linkedin-logo.png" alt="linkedin">
-            </a>
-        </div>
-        
-      </div>
-      <div class="cardContato">
-        <h3 class="titleContato">Tomás Rosa</h3>
-        <div>
-          <img id="frame" class="perfilContato" src="resources/tomas.jpg" alt="Foto">
-          <a
-              href="https://www.linkedin.com/in/tom%C3%A1s-paix%C3%A3o-rosa-434628228/"
-              ><img class="linkedin" src="resources/linkedin-logo.png" alt="linkedin">
+            </div>
+          </div>
+          <div class="cardContato">
+            <h3 class="titleContato">João Coelho</h3>
+            <div c>
+              <img
+                id="frame"
+                class="perfilContato"
+                src="resources/joao.jpg"
+                alt="Foto"
+              />
+              <a href="https://www.linkedin.com/in/jo%C3%A3o-coelho-b24908156/"
+                ><img
+                  class="linkedin"
+                  src="resources/linkedin-logo.png"
+                  alt="linkedin"
+                />
               </a>
+            </div>
+          </div>
+          <div class="cardContato">
+            <h3 class="titleContato">Murilo Amado</h3>
+            <div>
+              <img
+                id="frame"
+                class="perfilContato"
+                src="resources/murilo.jpg"
+                alt="Foto"
+              />
+              <a href="https://www.linkedin.com/in/murilo-amado-47b7a4144/"
+                ><img
+                  class="linkedin"
+                  src="resources/linkedin-logo.png"
+                  alt="linkedin"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="cardContato">
+            <h3 class="titleContato">Tomás Rosa</h3>
+            <div>
+              <img
+                id="frame"
+                class="perfilContato"
+                src="resources/tomas.jpg"
+                alt="Foto"
+              />
+              <a
+                href="https://www.linkedin.com/in/tom%C3%A1s-paix%C3%A3o-rosa-434628228/"
+                ><img
+                  class="linkedin"
+                  src="resources/linkedin-logo.png"
+                  alt="linkedin"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
     </section>
 
     <!--jquery-->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    
-    <script>
-        //Mostrar o texto dos repteis comuns
-        const text_card = document.getElementsByClassName("text-card");
-        function show_text(i){
-            text_card[i].style.display ="block";
-        }
-        function hide_text(i){
-            text_card[i].style.display ="none";
-        }
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
 
-        // Navbar responsive
-        function show_menu(){
-          var x = document.getElementsByClassName("nav-item")[1];
-          if (x.style.display === "none") {
-            document.getElementsByTagName("nav")[0].style.height = "40vh";
-            const nav_item = document.getElementsByClassName("nav-item");
-            for (let i=1; i<nav_item.length; i++){
-              nav_item[i].style.display = "block";
-            }
-            
-          } else {
-            document.getElementsByTagName("nav")[0].style.height = "10vh";
-            const nav_item = document.getElementsByClassName("nav-item");
-            for (let i=1; i<nav_item.length; i++){
-              nav_item[i].style.display = "none";
-            }            
+    <script>
+      //Mostrar o texto dos repteis comuns
+      const animal_description =
+        document.getElementsByClassName("animal_description");
+      function show_text(i) {
+        animal_description[i].style.display = "block";
+        animal_description[i].style.background = "rgba(136, 133, 133, 0.5)";
+        //animal_description[i].style.textAlign = "justify";
+      }
+      function hide_text(i) {
+        animal_description[i].style.display = "none";
+      }
+
+      // Navbar responsive
+      function show_menu() {
+        var x = document.getElementsByClassName("nav-item")[1];
+        if (x.style.display === "none") {
+          document.getElementsByTagName("nav")[0].style.height = "40vh";
+          const nav_item = document.getElementsByClassName("nav-item");
+          for (let i = 1; i < nav_item.length; i++) {
+            nav_item[i].style.display = "block";
           }
+        } else {
+          document.getElementsByTagName("nav")[0].style.height = "10vh";
+          const nav_item = document.getElementsByClassName("nav-item");
+          for (let i = 1; i < nav_item.length; i++) {
+            nav_item[i].style.display = "none";
+          }
+        }
       }
 
       function myFunction() {
-      var y = document.getElementById("myTopnav");
-      if (y.className === "topnav") {
-        y.className += " responsive";
-      } else {
-        y.className = "topnav";
+        var y = document.getElementById("myTopnav");
+        if (y.className === "topnav") {
+          y.className += " responsive";
+        } else {
+          y.className = "topnav";
+        }
       }
-}
     </script>
     <!-- Javascript para o jogo-->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

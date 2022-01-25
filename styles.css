@@ -4,6 +4,7 @@ html {
 body {
   font-family: "Courier New", Courier, monospace;
   margin: 0;
+  background-color: #a5c49d;
 }
 
 header > div {
@@ -43,23 +44,31 @@ header > div > div {
 
 .biologist-box {
   cursor: default;
-  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #4e7968;
   font-style: italic;
   margin: 2vh 10vw;
   padding: 8vh;
   font-size: 3.5vh;
+
   animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 .most-common {
-  border: 1px solid brown;
+  background-color: #629782;
   margin: 0 10vw;
-  padding-bottom: 5vh;
   cursor: default;
+  border-radius: 10px;
 }
 
-#line1-most-common, #line2-most-common{
+.titulo_most_common {
+  padding-left: 2vw;
+  padding-top: 1vw;
+}
+
+#line1-most-common,
+#line2-most-common {
   text-align: center;
 }
 .cardAnimal {
@@ -67,6 +76,7 @@ header > div > div {
   margin: 2.5vh 2.5vw;
   height: 30vh;
   width: 20vw;
+  border-radius: 3px;
 }
 
 .cardAnimal > img {
@@ -91,12 +101,7 @@ legend {
 legend:hover {
   background: rgba(136, 133, 133, 0.5);
 }
-.latim {
-  font-style: italic;
-  float: right;
-  margin: 10px;
-  font-size: 2vh;
-}
+
 .text-card {
   font-size: 2vh;
   padding: 15px;
@@ -173,9 +178,11 @@ legend:hover {
 }
 
 .game {
-  border: 1px solid brown;
   margin: 2vh 10vw;
   cursor: default;
+  background-color: #699e89;
+  padding: 2vh 3vw;
+  border-radius: 10px;
 }
 
 .game-box {
@@ -269,7 +276,7 @@ legend:hover {
   .text-card {
     font-size: 2.2vh;
   }
-  .cardAnimal{
+  .cardAnimal {
     display: block;
     width: 100%;
     margin-left: auto;
@@ -294,7 +301,7 @@ legend:hover {
   .text-card {
     font-size: 2.2vh;
   }
-  .cardAnimal{
+  .cardAnimal {
     display: block;
     width: 100%;
     margin-left: auto;
@@ -306,4 +313,80 @@ legend:hover {
     width: 45vw;
     min-width: 290px;
   }
+}
+
+.most-common-container {
+  text-align: center;
+}
+.cagado {
+  background-image: url(resources/cagado.jpg);
+  background-repeat: no-repeat;
+  background-size: 350px 40vh;
+  height: 40vh;
+  width: 350px;
+  display: inline-block;
+  margin: 1vh 1vw;
+  overflow: auto;
+}
+.camaleao {
+  background-image: url(resources/camaleao.jpg);
+  background-repeat: no-repeat;
+  background-size: 350px 40vh;
+  height: 40vh;
+  width: 350px;
+  display: inline-block;
+  margin: 1vh 1vw;
+  overflow: auto;
+}
+.tartaruga {
+  background-image: url(resources/tartaruga.jpg);
+  background-repeat: no-repeat;
+  background-size: 350px 40vh;
+  height: 40vh;
+  width: 350px;
+  display: inline-block;
+  margin: 1vh 1vw;
+  overflow: auto;
+}
+.sardao {
+  background-image: url(resources/sardao.jpg);
+  background-repeat: no-repeat;
+  background-size: 350px 40vh;
+  height: 40vh;
+  width: 350px;
+  display: inline-block;
+  margin: 1vh 1vw;
+  overflow: auto;
+}
+.cobra {
+  background-image: url(resources/cobra.jpg);
+  background-repeat: no-repeat;
+  background-size: 350px 40vh;
+  height: 40vh;
+  width: 350px;
+  display: inline-block;
+  margin: 1vh 1vw;
+  overflow: auto;
+}
+.osga {
+  background-image: url(resources/osga.jpg);
+  background-repeat: no-repeat;
+  background-size: 350px 40vh;
+  height: 40vh;
+  width: 350px;
+  display: inline-block;
+  margin: 1vh 1vw;
+  overflow: auto;
+}
+
+.animal_description {
+  display: none;
+  text-align: justify;
+}
+
+.latim {
+  font-style: italic;
+  text-align: right;
+  margin: 10px;
+  font-size: 2vh;
 }
