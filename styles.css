@@ -4,7 +4,7 @@ html {
 body {
   font-family: "Courier New", Courier, monospace;
   margin: 0;
-  background-color: #a5c49d;
+  background-color: #6a8660;
 }
 
 header > div {
@@ -45,7 +45,7 @@ header > div > div {
 .biologist-box {
   cursor: default;
   border-radius: 10px;
-  background-color: #4e7968;
+  background-color: #426c54;
   font-style: italic;
   margin: 2vh 10vw;
   padding: 8vh;
@@ -56,7 +56,7 @@ header > div > div {
 }
 
 .most-common {
-  background-color: #629782;
+  background-color: #426c54;
   margin: 0 10vw;
   cursor: default;
   border-radius: 10px;
@@ -180,7 +180,7 @@ legend:hover {
 .game {
   margin: 2vh 10vw;
   cursor: default;
-  background-color: #699e89;
+  background-color: #426c54;
   padding: 2vh 3vw;
   border-radius: 10px;
 }
