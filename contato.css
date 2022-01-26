@@ -1,9 +1,9 @@
-.body {
-  background-color: #100e1796;
+/*.body {
+  background-color: #426c54;
   font-family: "Open Sans", sans-serif;
   height: 300px;
   margin: 0 auto;
-}
+} */
 
 .containerContato {
   height: 300px;
@@ -11,7 +11,6 @@
   top: 150px;
   left: calc(50% - 300px);
   display: flex;
-
 }
 
 .cardContato {
@@ -48,12 +47,10 @@
   position: relative;
   top: 50%;
   left: 50%;
- 
 }
 .perfilContato {
   height: 150px;
   width: 150px;
-
 }
 #frame {
   border-radius: 25px;
@@ -77,7 +74,8 @@ svg {
   stroke-dashoffset: 100;
   transition: 0.6s ease-out;
 }
-
+/*
 .contato {
   padding-left: 40%;
 }
+*/

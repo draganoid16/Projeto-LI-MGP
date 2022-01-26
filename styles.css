@@ -193,7 +193,8 @@ legend:hover {
   position: fixed;
   width: 100vw;
   overflow: hidden;
-  background-color: rgba(18, 47, 20, 255);
+  /*background-color: rgba(18, 47, 20, 255); */
+  background-color: #6a8660;
   z-index: 2;
 }
 
@@ -213,7 +214,8 @@ legend:hover {
 }
 
 .topnav a.active {
-  background-color: rgba(10, 28, 15, 255);
+  background-color: #426c54;
+  /*background-color: rgba(10, 28, 15, 255);*/
   color: white;
 }
 
@@ -327,7 +329,7 @@ legend:hover {
   display: inline-block;
   margin: 1vh 1vw;
   overflow: auto;
-  border: 2px solid rgba(255, 255, 255, 0.0);
+  border: 2px solid rgba(255, 255, 255, 0);
 }
 .camaleao {
   background-image: url(resources/camaleao.jpg);
@@ -338,7 +340,7 @@ legend:hover {
   display: inline-block;
   margin: 1vh 1vw;
   overflow: auto;
-  border: 2px solid rgba(255, 255, 255, 0.0);
+  border: 2px solid rgba(255, 255, 255, 0);
 }
 .tartaruga {
   background-image: url(resources/tartaruga.jpg);
@@ -349,7 +351,7 @@ legend:hover {
   display: inline-block;
   margin: 1vh 1vw;
   overflow: auto;
-  border: 2px solid rgba(255, 255, 255, 0.0);
+  border: 2px solid rgba(255, 255, 255, 0);
 }
 .sardao {
   background-image: url(resources/sardao.jpg);
@@ -360,7 +362,7 @@ legend:hover {
   display: inline-block;
   margin: 1vh 1vw;
   overflow: auto;
-  border: 2px solid rgba(255, 255, 255, 0.0);
+  border: 2px solid rgba(255, 255, 255, 0);
 }
 .cobra {
   background-image: url(resources/cobra.jpg);
@@ -371,7 +373,7 @@ legend:hover {
   display: inline-block;
   margin: 1vh 1vw;
   overflow: auto;
-  border: 2px solid rgba(255, 255, 255, 0.0);
+  border: 2px solid rgba(255, 255, 255, 0);
 }
 .osga {
   background-image: url(resources/osga.jpg);
@@ -382,7 +384,7 @@ legend:hover {
   display: inline-block;
   margin: 1vh 1vw;
   overflow: auto;
-  border: 2px solid rgba(255, 255, 255, 0.0);
+  border: 2px solid rgba(255, 255, 255, 0);
 }
 
 .animal_description {
@@ -396,4 +398,12 @@ legend:hover {
   text-align: right;
   margin: 10px;
   font-size: 2vh;
+}
+
+.contacts {
+  margin: 2vh 10vw;
+  cursor: default;
+  background-color: #426c54;
+  padding: 2vh 3vw;
+  border-radius: 10px;
 }
