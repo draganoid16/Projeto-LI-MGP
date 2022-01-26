@@ -5,6 +5,8 @@ body {
   font-family: "Courier New", Courier, monospace;
   margin: 0;
   background-color: #6a8660;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
 header > div {
@@ -60,6 +62,7 @@ header > div > div {
   margin: 0 10vw;
   cursor: default;
   border-radius: 10px;
+  scroll-snap-align: start;
 }
 
 .titulo_most_common {
@@ -183,6 +186,7 @@ legend:hover {
   background-color: #426c54;
   padding: 2vh 3vw;
   border-radius: 10px;
+  scroll-snap-align: start;
 }
 
 .game-box {

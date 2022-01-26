@@ -4,20 +4,30 @@
   height: 300px;
   margin: 0 auto;
 } */
-
+.contacts-box {
+  padding: 2vh 10vw;
+}
 .containerContato {
   height: 300px;
   width: 600px;
   top: 150px;
   left: calc(50% - 300px);
   display: flex;
+  margin-bottom: 3vh;
+}
+
+@media screen and (max-width: 1200px) {
+  .containerContato {
+    display: inline-block;
+  }
 }
 
 .cardContato {
   display: flex;
-  height: 350px;
+  height: 3 50px;
   width: 300px;
   background-color: #100a1d;
+
   border-radius: 10px;
   box-shadow: -1rem 0 3rem #000;
   /*   margin-left: -50px; */
@@ -37,7 +47,7 @@
 
 .cardContato:hover.cardContato {
   position: relative;
-  left: 50px;
+  left: -50px;
   transition: 0.4s ease-out;
 }
 
@@ -45,12 +55,13 @@
   color: white;
   font-weight: 300;
   position: relative;
-  top: 50%;
+  top: 60%;
   left: 50%;
 }
 .perfilContato {
   height: 150px;
   width: 150px;
+  margin: 5vh 0;
 }
 #frame {
   border-radius: 25px;
