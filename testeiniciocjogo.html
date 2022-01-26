@@ -347,10 +347,48 @@
       function show_text(i) {
         animal_description[i].style.display = "block";
         animal_description[i].style.background = "rgba(136, 133, 133, 0.5)";
-        animal_description[i].style.border = "2px dashed black";
+        //animal_description[i].style.border = "2px dashed black";
+        if(i==0){
+          cagado = document.getElementsByClassName("cagado");
+          cagado[0].style.border = "2px dashed black";
+        }else if(i==1){
+          camaleao = document.getElementsByClassName("camaleao");
+          camaleao[0].style.border = "2px dashed black";
+        }else if(i==2){
+          tartaruga = document.getElementsByClassName("tartaruga");
+          tartaruga[0].style.border = "2px dashed black";
+        }else if(i==3){
+          sardao = document.getElementsByClassName("sardao");
+          sardao[0].style.border = "2px dashed black";
+        }else if(i==4){
+          cobra = document.getElementsByClassName("cobra");
+          cobra[0].style.border = "2px dashed black";
+        }else if(i==5){
+          osga = document.getElementsByClassName("osga");
+          osga[0].style.border = "2px dashed black";
+        }
       }
       function hide_text(i) {
         animal_description[i].style.display = "none";
+        if(i==0){
+          cagado = document.getElementsByClassName("cagado");
+          cagado[0].style.border = "2px solid rgba(255, 255, 255, 0.0)";
+        }else if(i==1){
+          camaleao = document.getElementsByClassName("camaleao");
+          camaleao[0].style.border = "2px solid rgba(255, 255, 255, 0.0)";
+        }else if(i==2){
+          tartaruga = document.getElementsByClassName("tartaruga");
+          tartaruga[0].style.border = "2px solid rgba(255, 255, 255, 0.0)";
+        }else if(i==3){
+          sardao = document.getElementsByClassName("sardao");
+          sardao[0].style.border = "2px solid rgba(255, 255, 255, 0.0)";
+        }else if(i==4){
+          cobra = document.getElementsByClassName("cobra");
+          cobra[0].style.border = "2px solid rgba(255, 255, 255, 0.0)";
+        }else if(i==5){
+          osga = document.getElementsByClassName("osga");
+          osga[0].style.border = "2px solid rgba(255, 255, 255, 0.0)";
+        }
       }
 
       // Navbar responsive

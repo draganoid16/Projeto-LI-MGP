@@ -327,6 +327,7 @@ legend:hover {
   display: inline-block;
   margin: 1vh 1vw;
   overflow: auto;
+  border: 2px solid rgba(255, 255, 255, 0.0);
 }
 .camaleao {
   background-image: url(resources/camaleao.jpg);
@@ -337,6 +338,7 @@ legend:hover {
   display: inline-block;
   margin: 1vh 1vw;
   overflow: auto;
+  border: 2px solid rgba(255, 255, 255, 0.0);
 }
 .tartaruga {
   background-image: url(resources/tartaruga.jpg);
@@ -347,6 +349,7 @@ legend:hover {
   display: inline-block;
   margin: 1vh 1vw;
   overflow: auto;
+  border: 2px solid rgba(255, 255, 255, 0.0);
 }
 .sardao {
   background-image: url(resources/sardao.jpg);
@@ -357,6 +360,7 @@ legend:hover {
   display: inline-block;
   margin: 1vh 1vw;
   overflow: auto;
+  border: 2px solid rgba(255, 255, 255, 0.0);
 }
 .cobra {
   background-image: url(resources/cobra.jpg);
@@ -367,6 +371,7 @@ legend:hover {
   display: inline-block;
   margin: 1vh 1vw;
   overflow: auto;
+  border: 2px solid rgba(255, 255, 255, 0.0);
 }
 .osga {
   background-image: url(resources/osga.jpg);
@@ -377,6 +382,7 @@ legend:hover {
   display: inline-block;
   margin: 1vh 1vw;
   overflow: auto;
+  border: 2px solid rgba(255, 255, 255, 0.0);
 }
 
 .animal_description {
