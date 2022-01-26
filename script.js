@@ -78,7 +78,7 @@ function pergunta2() {
     // volta a adicionar background no botao 1 e 3
     botao1.style.backgroundColor = "rgb(153, 153, 153)"; //mete uma cor nova
     botao3.style.backgroundColor = "rgb(60, 122, 55)";
-    escolhas[1] = "";
+    escolhas[0] = "";
     pergunta1();
   };
   botao1.onclick = function () {
@@ -117,6 +117,7 @@ function pergunta3() {
   botao3.innerHTML = "Tem quatro";
   //se clicar no anterior vai para a pergunta atras
   botao_anterior.onclick = function () {
+    escolhas[1] = "";
     pergunta2();
   };
 
@@ -154,6 +155,7 @@ function pergunta4() {
   botao3.innerHTML = "Nao";
   //se clicar no anterior vai para a pergunta atras
   botao_anterior.onclick = function () {
+    escolhas[2] = "";
     pergunta3();
   };
   botao1.onclick = function () {
@@ -196,6 +198,7 @@ function pergunta5() {
   botao3.innerHTML = "Terra";
   //se clicar no anterior vai para a pergunta atras
   botao_anterior.onclick = function () {
+    escolhas[3] = "";
     pergunta4();
   };
   botao1.onclick = function () {
@@ -239,6 +242,7 @@ function pergunta6() {
   botao3.innerHTML = "Salgada";
   //se clicar no anterior vai para a pergunta atras
   botao_anterior.onclick = function () {
+    escolhas[4] = "";
     pergunta5();
   };
   botao1.onclick = function () {
