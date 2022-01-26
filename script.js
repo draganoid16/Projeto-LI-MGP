@@ -78,6 +78,7 @@ function pergunta2() {
     // volta a adicionar background no botao 1 e 3
     botao1.style.backgroundColor = "rgb(153, 153, 153)"; //mete uma cor nova
     botao3.style.backgroundColor = "rgb(60, 122, 55)";
+    escolhas[1] = "";
     pergunta1();
   };
   botao1.onclick = function () {
