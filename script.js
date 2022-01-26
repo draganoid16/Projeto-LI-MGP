@@ -1,6 +1,6 @@
 //document.getElementById("cagado").style.display = "none";
 //document.getElementById("osga-moura").style.display = "none";
-var again = document.getElementsByClassName("again")[0];
+
 var botao_anterior = document.getElementById("botao_anterior");
 var botao_reset = document.getElementById("botao_reset");
 var textodoanimal = document.getElementById("textofinal");
@@ -8,6 +8,13 @@ var botao1 = document.getElementById("botao_cinzento");
 var botao2 = document.getElementById("botao_castanho");
 var botao3 = document.getElementById("botao_verde");
 var frase = document.getElementById("pergunta1");
+
+var camaleao_imagem = document.getElementById("camaleao");
+var cobra_imagem = document.getElementById("cobra");
+var sardao_imagem = document.getElementById("sardao");
+var osga_imagem = document.getElementById("osga");
+var cagado_imagem = document.getElementById("cagado");
+var tartaruga_imagem = document.getElementById("tartaruga");
 
 const escolhas = [];
 const perguntas = [
@@ -20,9 +27,11 @@ const perguntas = [
 ];
 
 pergunta1();
-again.onclick = function(){
-  document.getElementsByClassName("choice")[0].style.display ="none";
-  document.getElementsByClassName("choice1")[0].style.display ="grid";
+
+function again() {
+  botao_anterior.style.display = "none";
+  document.getElementsByClassName("choice")[0].style.display = "none";
+  document.getElementsByClassName("choice1")[0].style.display = "grid";
   botao2.style.display = "block";
   botao1.style.backgroundColor = "rgb(153, 153, 153)";
   botao3.style.backgroundColor = "rgb(60, 122, 55)";
@@ -32,6 +41,7 @@ again.onclick = function(){
   escolhas[3] = "";
   escolhas[4] = "";
   escolhas[5] = "";
+  textodoanimal.innerHTML = "";
   pergunta1();
 }
 
@@ -49,6 +59,7 @@ botao_reset.onclick = function () {
   escolhas[3] = "";
   escolhas[4] = "";
   escolhas[5] = "";
+  textodoanimal.innerHTML = "";
   pergunta1();
 };
 
@@ -115,10 +126,14 @@ function pergunta2() {
       botao2.style.display = "none";
       botao3.style.display = "none";
       botao_anterior.style.display ="none"; */
-      document.getElementsByClassName("choice1")[0].style.display ="none";
-      document.getElementsByClassName("choice")[0].style.display ="grid";
-      document.getElementById("camaleão").style.display = "block";
-
+      document.getElementsByClassName("choice1")[0].style.display = "none";
+      document.getElementsByClassName("choice")[0].style.display = "grid";
+      camaleao_imagem.style.display = "block";
+      cobra_imagem.style.display = "none";
+      sardao_imagem.style.display = "none";
+      osga_imagem.style.display = "none";
+      cagado_imagem.style.display = "none";
+      tartaruga_imagem.style.display = "none";
     }
   };
 
@@ -150,7 +165,14 @@ function pergunta3() {
       escolhas[1] +
       "pernas:" +
       escolhas[2];
-    alert("O animal que avistou foi uma cobra!");
+    document.getElementsByClassName("choice1")[0].style.display = "none";
+    document.getElementsByClassName("choice")[0].style.display = "grid";
+    cobra_imagem.style.display = "block";
+    camaleao_imagem.style.display = "none";
+    sardao_imagem.style.display = "none";
+    osga_imagem.style.display = "none";
+    cagado_imagem.style.display = "none";
+    tartaruga_imagem.style.display = "none";
     console.log(escolhas);
   };
 
@@ -204,9 +226,23 @@ function pergunta4() {
       "carapaça: " +
       escolhas[3];
     if (escolhas[0] == "Verde") {
-      alert("O animal que avistou foi um sardão!");
+      document.getElementsByClassName("choice1")[0].style.display = "none";
+      document.getElementsByClassName("choice")[0].style.display = "grid";
+      sardao_imagem.style.display = "block";
+      cobra_imagem.style.display = "none";
+      camaleao_imagem.style.display = "none";
+      osga_imagem.style.display = "none";
+      cagado_imagem.style.display = "none";
+      tartaruga_imagem.style.display = "none";
     } else if (escolhas[0] == "Cinzento" || escolhas[0] == "Castanho") {
-      alert("O animal que avistou foi uma osga!");
+      document.getElementsByClassName("choice1")[0].style.display = "none";
+      document.getElementsByClassName("choice")[0].style.display = "grid";
+      osga_imagem.style.display = "block";
+      sardao_imagem.style.display = "none";
+      cobra_imagem.style.display = "none";
+      camaleao_imagem.style.display = "none";
+      cagado_imagem.style.display = "none";
+      tartaruga_imagem.style.display = "none";
     }
     console.log(escolhas);
   };
@@ -250,7 +286,14 @@ function pergunta5() {
       escolhas[3] +
       "Ambiente: " +
       escolhas[4];
-    alert("O animal que avistou foi um cágado!");
+    document.getElementsByClassName("choice1")[0].style.display = "none";
+    document.getElementsByClassName("choice")[0].style.display = "grid";
+    cagado_imagem.style.display = "block";
+    osga_imagem.style.display = "none";
+    sardao_imagem.style.display = "none";
+    cobra_imagem.style.display = "none";
+    camaleao_imagem.style.display = "none";
+    tartaruga_imagem.style.display = "none";
     console.log(escolhas);
   };
 }
@@ -281,7 +324,14 @@ function pergunta6() {
       "água: " +
       escolhas[5];
     console.log(escolhas);
-    alert("O animal que avistou foi um cágado!");
+    document.getElementsByClassName("choice1")[0].style.display = "none";
+    document.getElementsByClassName("choice")[0].style.display = "grid";
+    cagado_imagem.style.display = "block";
+    osga_imagem.style.display = "none";
+    sardao_imagem.style.display = "none";
+    cobra_imagem.style.display = "none";
+    camaleao_imagem.style.display = "none";
+    tartaruga_imagem.style.display = "none";
   };
   botao3.onclick = function () {
     escolhas[5] = "Salgada";
@@ -299,6 +349,13 @@ function pergunta6() {
       "água: " +
       escolhas[5];
     console.log(escolhas);
-    alert("O animal que avistou foi uma tartaruga!");
+    document.getElementsByClassName("choice1")[0].style.display = "none";
+    document.getElementsByClassName("choice")[0].style.display = "grid";
+    tartaruga_imagem.style.display = "block";
+    cagado_imagem.style.display = "none";
+    osga_imagem.style.display = "none";
+    sardao_imagem.style.display = "none";
+    cobra_imagem.style.display = "none";
+    camaleao_imagem.style.display = "none";
   };
 }

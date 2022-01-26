@@ -446,3 +446,10 @@ legend:hover {
 .link_footer:hover {
   text-decoration: underline;
 }
+.hide {
+  display: none;
+  z-index: 30;
+}
+a:hover + .hide {
+  display: block;
+}

@@ -87,25 +87,26 @@
 
 .animal-escolhido {
   display: none;
-  border: 2px solid black;
-  background-color: rgba(255, 255, 255, 0.8);
+
+  background-color: #426c54;
   text-align: center;
   padding: 5vw;
 }
 
-.animal-escolhido > img{
+.animal-escolhido > img {
   height: 45vh;
   width: 350px;
 }
 
-@media screen and (max-width: 700px){
-  .animal-escolhido > img{
+@media screen and (max-width: 700px) {
+  .animal-escolhido > img {
     height: 40vh;
     width: 300px;
-  }  
+  }
 }
 
-.again, .botao_reset {
+.again,
+.botao_reset {
   border: 3px dashed rgb(0, 0, 0);
   font-size: 1.5vw;
   cursor: pointer;
@@ -147,16 +148,24 @@
   grid-row: 3;
   text-align: center;
 }
-.download{
+.download {
   font-size: large;
   font-weight: bold;
 }
-.download_pdf{
-
+.download_icons {
+  display: inline-block;
+  height: 6vh;
+  cursor: pointer;
+  width: fit-content;
 }
-.download_csv{
-
+.download_icons:hover {
 }
-.download_json{
-  
+.download_csv {
+  background-image: url(resources/icons/csv.png);
+}
+.download_json {
+  background-image: url(resources/icons/json.png);
+}
+.again:hover {
+  text-decoration: underline 2px;
 }
