@@ -1,5 +1,6 @@
-document.getElementById("cagado").style.display = "none";
-document.getElementById("osga-moura").style.display = "none";
+//document.getElementById("cagado").style.display = "none";
+//document.getElementById("osga-moura").style.display = "none";
+var again = document.getElementsByClassName("again")[0];
 var botao_anterior = document.getElementById("botao_anterior");
 var botao_reset = document.getElementById("botao_reset");
 var textodoanimal = document.getElementById("textofinal");
@@ -19,13 +20,28 @@ const perguntas = [
 ];
 
 pergunta1();
+again.onclick = function(){
+  document.getElementsByClassName("choice")[0].style.display ="none";
+  document.getElementsByClassName("choice1")[0].style.display ="grid";
+  botao2.style.display = "block";
+  botao1.style.backgroundColor = "rgb(153, 153, 153)";
+  botao3.style.backgroundColor = "rgb(60, 122, 55)";
+  escolhas[0] = "";
+  escolhas[1] = "";
+  escolhas[2] = "";
+  escolhas[3] = "";
+  escolhas[4] = "";
+  escolhas[5] = "";
+  pergunta1();
+}
+
 botao_reset.onclick = function () {
   // como é a primeira pergunta este botao tem de voltar a desaparecer
-  botao_anterior.style = "none";
+  botao_anterior.style.display = "none";
   // volta a mostrar o botao 2
   botao2.style.display = "block";
   // volta a adicionar background no botao 1 e 3
-  botao1.style.backgroundColor = "rgb(153, 153, 153)"; //mete uma cor nova
+  botao1.style.backgroundColor = "rgb(153, 153, 153)";
   botao3.style.backgroundColor = "rgb(60, 122, 55)";
   escolhas[0] = "";
   escolhas[1] = "";
@@ -35,6 +51,7 @@ botao_reset.onclick = function () {
   escolhas[5] = "";
   pergunta1();
 };
+
 function pergunta1() {
   frase.innerHTML = perguntas[0];
   botao1.innerHTML = "Cinzento";
@@ -72,7 +89,7 @@ function pergunta2() {
   //se clicar no anterior
   botao_anterior.onclick = function () {
     // como é a primeira pergunta este botao tem de voltar a desaparecer
-    botao_anterior.style = "none";
+    botao_anterior.style.display = "none";
     // volta a mostrar o botao 2
     botao2.style.display = "block";
     // volta a adicionar background no botao 1 e 3
@@ -90,15 +107,18 @@ function pergunta2() {
 
       console.log(escolhas);
 
-      //document.getElementById("tituloprincipal").style.display = "none";
+      /*document.getElementById("tituloprincipal").style.display = "none";
       document.getElementById("textofinal").style.display = "none";
       document.getElementById("pergunta1").style.display = "none";
-
+  
       botao1.style.display = "none";
       botao2.style.display = "none";
       botao3.style.display = "none";
-
+      botao_anterior.style.display ="none"; */
+      document.getElementsByClassName("choice1")[0].style.display ="none";
+      document.getElementsByClassName("choice")[0].style.display ="grid";
       document.getElementById("camaleão").style.display = "block";
+
     }
   };
 

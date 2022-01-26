@@ -88,11 +88,24 @@
 .animal-escolhido {
   display: none;
   border: 2px solid black;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
+  padding: 5vw;
 }
 
-.botao_reset {
+.animal-escolhido > img{
+  height: 45vh;
+  width: 350px;
+}
+
+@media screen and (max-width: 700px){
+  .animal-escolhido > img{
+    height: 40vh;
+    width: 300px;
+  }  
+}
+
+.again, .botao_reset {
   border: 3px dashed rgb(0, 0, 0);
   font-size: 1.5vw;
   cursor: pointer;
@@ -133,4 +146,17 @@
   grid-column: col-start 1 / span 2;
   grid-row: 3;
   text-align: center;
+}
+.download{
+  font-size: large;
+  font-weight: bold;
+}
+.download_pdf{
+
+}
+.download_csv{
+
+}
+.download_json{
+  
 }
