@@ -120,6 +120,7 @@
   height: 8vh;
   width: fit-content;
   margin: 0;
+  display: none;
 }
 .container_botao {
   margin-top: 14vh;

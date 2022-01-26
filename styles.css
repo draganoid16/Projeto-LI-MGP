@@ -411,3 +411,38 @@ legend:hover {
   padding: 2vh 3vw;
   border-radius: 10px;
 }
+.info_footer {
+  height: 30vh;
+  background-color: #191b1a;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4vh;
+}
+.sobre_nos_container {
+  width: 30vw;
+}
+.contactos_container {
+  width: 20vw;
+}
+.links_uteis_container {
+  width: 10vw;
+}
+.titulo_footer {
+  color: #5a5a5a;
+  font-weight: bold;
+  padding-bottom: 2vh;
+}
+.subtexto_footer {
+  color: #8d8d8d;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.link_footer {
+  text-decoration: none;
+  color: #8d8d8d;
+  width: fit-content;
+}
+.link_footer:hover {
+  text-decoration: underline;
+}

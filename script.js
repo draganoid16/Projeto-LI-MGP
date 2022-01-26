@@ -1,5 +1,7 @@
 document.getElementById("cagado").style.display = "none";
 document.getElementById("osga-moura").style.display = "none";
+var botao_anterior = document.getElementById("botao_anterior");
+var botao_reset = document.getElementById("botao_reset");
 var textodoanimal = document.getElementById("textofinal");
 var botao1 = document.getElementById("botao_cinzento");
 var botao2 = document.getElementById("botao_castanho");
@@ -17,7 +19,22 @@ const perguntas = [
 ];
 
 pergunta1();
-
+botao_reset.onclick = function () {
+  // como é a primeira pergunta este botao tem de voltar a desaparecer
+  botao_anterior.style = "none";
+  // volta a mostrar o botao 2
+  botao2.style.display = "block";
+  // volta a adicionar background no botao 1 e 3
+  botao1.style.backgroundColor = "rgb(153, 153, 153)"; //mete uma cor nova
+  botao3.style.backgroundColor = "rgb(60, 122, 55)";
+  escolhas[0] = "";
+  escolhas[1] = "";
+  escolhas[2] = "";
+  escolhas[3] = "";
+  escolhas[4] = "";
+  escolhas[5] = "";
+  pergunta1();
+};
 function pergunta1() {
   frase.innerHTML = perguntas[0];
   botao1.innerHTML = "Cinzento";
@@ -50,29 +67,39 @@ function pergunta2() {
   //NAZAS NÃO TOCA QUERO QUE ISTO FIQUE SEPARADO
   botao1.style.backgroundColor = "rgb(82, 163, 131)"; //mete uma cor nova
   botao3.style.backgroundColor = "rgb(82, 163, 131)";
-  
 
+  botao_anterior.style.display = "block";
+  //se clicar no anterior
+  botao_anterior.onclick = function () {
+    // como é a primeira pergunta este botao tem de voltar a desaparecer
+    botao_anterior.style = "none";
+    // volta a mostrar o botao 2
+    botao2.style.display = "block";
+    // volta a adicionar background no botao 1 e 3
+    botao1.style.backgroundColor = "rgb(153, 153, 153)"; //mete uma cor nova
+    botao3.style.backgroundColor = "rgb(60, 122, 55)";
+    pergunta1();
+  };
   botao1.onclick = function () {
     // se for sim
-    
-    if(escolhas[1] = "Sim"){
-    textodoanimal.innerHTML =
-      "cor " + escolhas[0] + "olhos movem-se autonomamente: " + escolhas[1];
 
-    console.log(escolhas);
+    if ((escolhas[1] = "Sim")) {
+      textodoanimal.innerHTML =
+        "cor " + escolhas[0] + "olhos movem-se autonomamente: " + escolhas[1];
 
-    //document.getElementById("tituloprincipal").style.display = "none";
-    document.getElementById("textofinal").style.display = "none";
-    document.getElementById("pergunta1").style.display = "none";
+      console.log(escolhas);
 
-    botao1.style.display = "none";
-    botao2.style.display = "none";
-    botao3.style.display = "none";
+      //document.getElementById("tituloprincipal").style.display = "none";
+      document.getElementById("textofinal").style.display = "none";
+      document.getElementById("pergunta1").style.display = "none";
 
-    document.getElementById("camaleão").style.display = "block";
+      botao1.style.display = "none";
+      botao2.style.display = "none";
+      botao3.style.display = "none";
+
+      document.getElementById("camaleão").style.display = "block";
+    }
   };
-
-};
 
   botao3.onclick = function () {
     escolhas[1] = "Não";
@@ -87,6 +114,11 @@ function pergunta3() {
   botao1.innerHTML = "Não tem";
   botao2.style.display = "none";
   botao3.innerHTML = "Tem quatro";
+  //se clicar no anterior vai para a pergunta atras
+  botao_anterior.onclick = function () {
+    pergunta2();
+  };
+
   botao1.onclick = function () {
     escolhas[2] = "0";
     textodoanimal.innerHTML =
@@ -119,6 +151,10 @@ function pergunta4() {
   botao1.innerHTML = "Sim";
   botao2.style.display = "none";
   botao3.innerHTML = "Nao";
+  //se clicar no anterior vai para a pergunta atras
+  botao_anterior.onclick = function () {
+    pergunta3();
+  };
   botao1.onclick = function () {
     escolhas[3] = "sim";
     textodoanimal.innerHTML =
@@ -157,6 +193,10 @@ function pergunta5() {
   botao1.innerHTML = "Água";
   botao2.style.display = "none";
   botao3.innerHTML = "Terra";
+  //se clicar no anterior vai para a pergunta atras
+  botao_anterior.onclick = function () {
+    pergunta4();
+  };
   botao1.onclick = function () {
     escolhas[4] = "Água";
     textodoanimal.innerHTML =
@@ -196,6 +236,10 @@ function pergunta6() {
   botao1.innerHTML = "Doce";
   botao2.style.display = "none";
   botao3.innerHTML = "Salgada";
+  //se clicar no anterior vai para a pergunta atras
+  botao_anterior.onclick = function () {
+    pergunta5();
+  };
   botao1.onclick = function () {
     escolhas[5] = "Doce";
     textodoanimal.innerHTML =
