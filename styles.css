@@ -418,6 +418,12 @@ legend:hover {
   justify-content: space-evenly;
   padding: 4vh;
 }
+.grupo_container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 1.5vh;
+}
 .sobre_nos_container {
   width: 30vw;
 }
@@ -431,8 +437,10 @@ legend:hover {
   color: #5a5a5a;
   font-weight: bold;
   padding-bottom: 2vh;
+  font-size: 18px;
 }
 .subtexto_footer {
+  padding-top: 1.4vh;
   color: #8d8d8d;
   display: flex;
   flex-direction: column;
@@ -445,11 +453,58 @@ legend:hover {
 }
 .link_footer:hover {
   text-decoration: underline;
+  z-index: 100000;
 }
-.hide {
+
+.perfil_hover,
+.uni_hover {
+  width: 8vw;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-self: flex-end;
+}
+.goncalo_container,
+.tomas_container,
+.murilo_container,
+.joao_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#goncalo_perfil,
+#tomas_perfil,
+#murilo_perfil,
+#joao_perfil {
   display: none;
-  z-index: 30;
+  border: 3px solid #474747;
 }
-a:hover + .hide {
-  display: block;
+#goncalo_texto:hover + #goncalo_perfil,
+#tomas_texto:hover + #tomas_perfil,
+#murilo_texto:hover + #murilo_perfil,
+#joao_texto:hover + #joao_perfil,
+#link_ua:hover + #ua_perfil,
+#link_estga:hover + #estga_perfil {
+  display: flex;
+}
+.estga_container,
+.ua_container {
+  display: flex;
+  flex-direction: row;
+}
+.uni_hover {
+  padding-left: 5vw;
+  justify-content: flex-start;
+}
+#ua_perfil {
+  padding-top: 5vh;
+}
+#estga_perfil {
+  width: 10vw;
+}
+.tomas_container {
+}
+#ua_perfil,
+#estga_perfil {
+  display: none;
 }
