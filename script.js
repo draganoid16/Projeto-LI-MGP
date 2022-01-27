@@ -15,7 +15,7 @@ var sardao_imagem = document.getElementById("sardao");
 var osga_imagem = document.getElementById("osga");
 var cagado_imagem = document.getElementById("cagado");
 var tartaruga_imagem = document.getElementById("tartaruga");
-
+var jogo = 0; // nr de jogos
 const escolhas = [];
 const perguntas = [
   "De que cor é o seu animal?",
@@ -25,6 +25,13 @@ const perguntas = [
   "Em que ambiente viu o animal?",
   "Viu-o em água",
 ];
+
+var doc = new jsPDF();
+var pdf = document.getElementById("pdf");
+
+function downloadpdf() {
+  doc.save("respostas.pdf");
+}
 
 pergunta1();
 
@@ -42,6 +49,7 @@ function again() {
   escolhas[4] = "";
   escolhas[5] = "";
   textodoanimal.innerHTML = "";
+  doc.addPage();
   pergunta1();
 }
 
@@ -64,6 +72,7 @@ botao_reset.onclick = function () {
 };
 
 function pergunta1() {
+  jogo += 1;
   frase.innerHTML = perguntas[0];
   botao1.innerHTML = "Cinzento";
   botao2.innerHTML = "Castanho";
@@ -92,9 +101,9 @@ function pergunta2() {
   botao1.innerHTML = "Sim";
   botao2.style.display = "none";
   botao3.innerHTML = "Não";
-  //NAZAS NÃO TOCA QUERO QUE ISTO FIQUE SEPARADO
-  botao1.style.backgroundColor = "rgb(82, 163, 131)"; //mete uma cor nova
-  botao3.style.backgroundColor = "rgb(82, 163, 131)";
+
+  botao1.style.backgroundColor = "#2f5c50"; //mete uma cor nova
+  botao3.style.backgroundColor = "#2f5c50";
 
   botao_anterior.style.display = "block";
   //se clicar no anterior
@@ -118,14 +127,18 @@ function pergunta2() {
 
       console.log(escolhas);
 
-      /*document.getElementById("tituloprincipal").style.display = "none";
-      document.getElementById("textofinal").style.display = "none";
-      document.getElementById("pergunta1").style.display = "none";
-  
-      botao1.style.display = "none";
-      botao2.style.display = "none";
-      botao3.style.display = "none";
-      botao_anterior.style.display ="none"; */
+      //adicionar animal ao pdf
+      var camaleaoimg = new Image();
+      camaleaoimg.src = "resources/camaleao.jpg";
+
+      doc.text(100, 20, "Jogo " + jogo);
+      doc.text(20, 30, "Pergunta 1: " + perguntas[0]);
+      doc.text(20, 40, "Resposta: " + escolhas[0]);
+      doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
+      doc.text(20, 60, "Resposta: " + escolhas[1]);
+      doc.text(70, 70, "Resultado: Camaleão-Comum");
+      doc.addImage(camaleaoimg, "jpg", 30, 80, 150, 150);
+
       document.getElementsByClassName("choice1")[0].style.display = "none";
       document.getElementsByClassName("choice")[0].style.display = "grid";
       camaleao_imagem.style.display = "block";
@@ -165,6 +178,18 @@ function pergunta3() {
       escolhas[1] +
       "pernas:" +
       escolhas[2];
+    // adicionar o pdf da cobra
+    var cobraimg = new Image();
+    cobraimg.src = "resources/cobra.jpg";
+
+    doc.text(100, 20, "Jogo " + jogo);
+    doc.text(20, 30, "Pergunta 1: " + perguntas[0]);
+    doc.text(20, 40, "Resposta: " + escolhas[0]);
+    doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
+    doc.text(20, 60, "Resposta: " + escolhas[1]);
+    doc.text(60, 70, "Resultado: Cobra-de-pernas-pentadáctila");
+    doc.addImage(cobraimg, "jpg", 30, 80, 150, 150);
+
     document.getElementsByClassName("choice1")[0].style.display = "none";
     document.getElementsByClassName("choice")[0].style.display = "grid";
     cobra_imagem.style.display = "block";
@@ -226,6 +251,17 @@ function pergunta4() {
       "carapaça: " +
       escolhas[3];
     if (escolhas[0] == "Verde") {
+      var sardaoimg = new Image();
+      sardaoimg.src = "resources/sardao.jpg";
+
+      doc.text(100, 20, "Jogo " + jogo);
+      doc.text(20, 30, "Pergunta 1: " + perguntas[0]);
+      doc.text(20, 40, "Resposta: " + escolhas[0]);
+      doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
+      doc.text(20, 60, "Resposta: " + escolhas[1]);
+      doc.text(70, 70, "Resultado: Sardão");
+      doc.addImage(sardaoimg, "jpg", 30, 80, 150, 150);
+
       document.getElementsByClassName("choice1")[0].style.display = "none";
       document.getElementsByClassName("choice")[0].style.display = "grid";
       sardao_imagem.style.display = "block";
@@ -235,6 +271,17 @@ function pergunta4() {
       cagado_imagem.style.display = "none";
       tartaruga_imagem.style.display = "none";
     } else if (escolhas[0] == "Cinzento" || escolhas[0] == "Castanho") {
+      var osgaimg = new Image();
+      osgaimg.src = "resources/osga.jpg";
+
+      doc.text(100, 20, "Jogo " + jogo);
+      doc.text(20, 30, "Pergunta 1: " + perguntas[0]);
+      doc.text(20, 40, "Resposta: " + escolhas[0]);
+      doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
+      doc.text(20, 60, "Resposta: " + escolhas[1]);
+      doc.text(70, 70, "Resultado: Osga-Turca");
+      doc.addImage(osgaimg, "jpg", 30, 80, 150, 150);
+
       document.getElementsByClassName("choice1")[0].style.display = "none";
       document.getElementsByClassName("choice")[0].style.display = "grid";
       osga_imagem.style.display = "block";
@@ -286,6 +333,18 @@ function pergunta5() {
       escolhas[3] +
       "Ambiente: " +
       escolhas[4];
+
+    var cagadoimg = new Image();
+    cagadoimg.src = "resources/cagado.jpg";
+
+    doc.text(100, 20, "Jogo " + jogo);
+    doc.text(20, 30, "Pergunta 1: " + perguntas[0]);
+    doc.text(20, 40, "Resposta: " + escolhas[0]);
+    doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
+    doc.text(20, 60, "Resposta: " + escolhas[1]);
+    doc.text(70, 70, "Resultado: Cágado-Mediterrânico");
+    doc.addImage(cagadoimg, "jpg", 30, 80, 150, 150);
+
     document.getElementsByClassName("choice1")[0].style.display = "none";
     document.getElementsByClassName("choice")[0].style.display = "grid";
     cagado_imagem.style.display = "block";
@@ -324,6 +383,18 @@ function pergunta6() {
       "água: " +
       escolhas[5];
     console.log(escolhas);
+
+    var cagadoimg = new Image();
+    cagadoimg.src = "resources/cagado.jpg";
+
+    doc.text(100, 20, "Jogo " + jogo);
+    doc.text(20, 30, "Pergunta 1: " + perguntas[0]);
+    doc.text(20, 40, "Resposta: " + escolhas[0]);
+    doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
+    doc.text(20, 60, "Resposta: " + escolhas[1]);
+    doc.text(70, 70, "Resultado: Cágado-Mediterrânico");
+    doc.addImage(cagadoimg, "jpg", 30, 80, 150, 150);
+
     document.getElementsByClassName("choice1")[0].style.display = "none";
     document.getElementsByClassName("choice")[0].style.display = "grid";
     cagado_imagem.style.display = "block";
@@ -349,6 +420,18 @@ function pergunta6() {
       "água: " +
       escolhas[5];
     console.log(escolhas);
+
+    var tartarugaimg = new Image();
+    tartarugaimg.src = "resources/tartaruga.jpg";
+
+    doc.text(100, 20, "Jogo " + jogo);
+    doc.text(20, 30, "Pergunta 1: " + perguntas[0]);
+    doc.text(20, 40, "Resposta: " + escolhas[0]);
+    doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
+    doc.text(20, 60, "Resposta: " + escolhas[1]);
+    doc.text(70, 70, "Resultado: Tartaruga-Comum");
+    doc.addImage(tartarugaimg, "jpg", 30, 80, 150, 150);
+
     document.getElementsByClassName("choice1")[0].style.display = "none";
     document.getElementsByClassName("choice")[0].style.display = "grid";
     tartaruga_imagem.style.display = "block";

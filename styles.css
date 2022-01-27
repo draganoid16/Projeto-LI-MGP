@@ -35,6 +35,7 @@ header > div > div {
 }
 .middle-text {
   font-size: 5vh;
+  border-radius: 10px;
   font-style: italic;
   font-weight: bold;
   display: inline-block;
@@ -51,7 +52,7 @@ header > div > div {
   font-style: italic;
   margin: 2vh 10vw;
   padding: 8vh;
-  font-size: 3.5vh;
+  font-size: 4vh;
 
   animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s; /* don't forget to set a duration! */
@@ -437,7 +438,7 @@ legend:hover {
   color: #5a5a5a;
   font-weight: bold;
   padding-bottom: 2vh;
-  font-size: 18px;
+  font-size: 2.4vw;
 }
 .subtexto_footer {
   padding-top: 1.4vh;
@@ -445,6 +446,7 @@ legend:hover {
   display: flex;
   flex-direction: column;
   gap: 1vh;
+  font-size: 2vw;
 }
 .link_footer {
   text-decoration: none;
@@ -500,11 +502,53 @@ legend:hover {
   padding-top: 5vh;
 }
 #estga_perfil {
-  width: 10vw;
+  width: 9vw;
 }
 .tomas_container {
 }
 #ua_perfil,
 #estga_perfil {
   display: none;
+  align-self: center;
+  margin-left: 20px;
+  margin-top: -20px;
+}
+@media screen and (max-width: 1290px) {
+  .contactos_container {
+    width: 25vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .contactos_container {
+    width: 28vw;
+  }
+}
+@media screen and (max-width: 780px) {
+  .contactos_container {
+    width: 31vw;
+  }
+}
+@media screen and (max-width: 630px) {
+  .contactos_container {
+    width: 32vw;
+  }
+  .info_footer {
+    height: 30vh;
+  }
+}
+@media screen and (min-width: 700px) {
+  .titulo_footer {
+    color: #5a5a5a;
+    font-weight: bold;
+    padding-bottom: 2vh;
+    font-size: 18px;
+  }
+  .subtexto_footer {
+    padding-top: 1.4vh;
+    color: #8d8d8d;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    font-size: 15px;
+  }
 }
