@@ -552,3 +552,12 @@ legend:hover {
     font-size: 15px;
   }
 }
+
+.animal_link {
+  color: #ffffff;
+  text-decoration: none;
+}
+.animal_link:hover {
+  color: #dfb982;
+  text-decoration: underline;
+}
