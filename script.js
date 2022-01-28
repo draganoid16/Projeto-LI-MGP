@@ -25,7 +25,11 @@ const perguntas = [
   "Em que ambiente viu o animal?",
   "Viu-o em água",
 ];
-
+// csv é criado apenas com as perguntas que serão feitas.
+const csv = [
+  ["Jogo", perguntas[0], perguntas[1], perguntas[2], perguntas[3], perguntas[4], perguntas[5]]
+];
+console.log(csv); 
 var doc = new jsPDF();
 var pdf = document.getElementById("pdf");
 
