@@ -189,7 +189,7 @@ function pergunta3() {
     doc.text(20, 60, "Resposta: " + escolhas[1]);
     doc.text(20, 70, "Pergunta 3: " + perguntas[2]);
     doc.text(20, 80, "Resposta: " + escolhas[2]);
-    doc.text(50, 90, "Resultado: Cobra-de-pernas-pentadáctila");
+    doc.text(20, 90, "Resultado: Cobra-Rateira");
     doc.addImage(cobraimg, "jpg", 30, 100, 150, 150);
 
     document.getElementsByClassName("choice1")[0].style.display = "none";
@@ -261,8 +261,12 @@ function pergunta4() {
       doc.text(20, 40, "Resposta: " + escolhas[0]);
       doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
       doc.text(20, 60, "Resposta: " + escolhas[1]);
-      doc.text(70, 70, "Resultado: Sardão");
-      doc.addImage(sardaoimg, "jpg", 30, 80, 150, 150);
+      doc.text(20, 70, "Pergunta 3: " + perguntas[2]);
+      doc.text(20, 80, "Resposta: " + escolhas[2]);
+      doc.text(20, 90, "Pergunta 4: " + perguntas[3]);
+      doc.text(20, 100, "Resposta: " + escolhas[3]);
+      doc.text(70, 110, "Resultado: Sardão");
+      doc.addImage(sardaoimg, "jpg", 30, 120, 150, 150);
 
       document.getElementsByClassName("choice1")[0].style.display = "none";
       document.getElementsByClassName("choice")[0].style.display = "grid";
@@ -281,8 +285,12 @@ function pergunta4() {
       doc.text(20, 40, "Resposta: " + escolhas[0]);
       doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
       doc.text(20, 60, "Resposta: " + escolhas[1]);
-      doc.text(70, 70, "Resultado: Osga-Turca");
-      doc.addImage(osgaimg, "jpg", 30, 80, 150, 150);
+      doc.text(20, 70, "Pergunta 3: " + perguntas[2]);
+      doc.text(20, 80, "Resposta: " + escolhas[2]);
+      doc.text(20, 90, "Pergunta 4: " + perguntas[3]);
+      doc.text(20, 100, "Resposta: " + escolhas[3]);
+      doc.text(70, 110, "Resultado: Osga-Turca");
+      doc.addImage(osgaimg, "jpg", 30, 120, 150, 150);
 
       document.getElementsByClassName("choice1")[0].style.display = "none";
       document.getElementsByClassName("choice")[0].style.display = "grid";
@@ -344,8 +352,14 @@ function pergunta5() {
     doc.text(20, 40, "Resposta: " + escolhas[0]);
     doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
     doc.text(20, 60, "Resposta: " + escolhas[1]);
-    doc.text(70, 70, "Resultado: Cágado-Mediterrânico");
-    doc.addImage(cagadoimg, "jpg", 30, 80, 150, 150);
+    doc.text(20, 70, "Pergunta 3: " + perguntas[2]);
+    doc.text(20, 80, "Resposta: " + escolhas[2]);
+    doc.text(20, 90, "Pergunta 4: " + perguntas[3]);
+    doc.text(20, 100, "Resposta: " + escolhas[3]);
+    doc.text(20, 110, "Pergunta 5: " + perguntas[4]);
+    doc.text(20, 120, "Resposta: " + escolhas[4]);
+    doc.text(70, 130, "Resultado: Cágado-Mediterrânico");
+    doc.addImage(cagadoimg, "jpg", 30, 140, 150, 150);
 
     document.getElementsByClassName("choice1")[0].style.display = "none";
     document.getElementsByClassName("choice")[0].style.display = "grid";
@@ -394,8 +408,16 @@ function pergunta6() {
     doc.text(20, 40, "Resposta: " + escolhas[0]);
     doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
     doc.text(20, 60, "Resposta: " + escolhas[1]);
-    doc.text(70, 70, "Resultado: Cágado-Mediterrânico");
-    doc.addImage(cagadoimg, "jpg", 30, 80, 150, 150);
+    doc.text(20, 70, "Pergunta 3: " + perguntas[2]);
+    doc.text(20, 80, "Resposta: " + escolhas[2]);
+    doc.text(20, 90, "Pergunta 4: " + perguntas[3]);
+    doc.text(20, 100, "Resposta: " + escolhas[3]);
+    doc.text(20, 110, "Pergunta 5: " + perguntas[4]);
+    doc.text(20, 120, "Resposta: " + escolhas[4]);
+    doc.text(20, 130, "Pergunta 6: " + perguntas[5]);
+    doc.text(20, 140, "Resposta: " + escolhas[5]);
+    doc.text(70, 150, "Resultado: Cágado-Mediterrânico");
+    doc.addImage(cagadoimg, "jpg", 30, 160, 150, 150);
 
     document.getElementsByClassName("choice1")[0].style.display = "none";
     document.getElementsByClassName("choice")[0].style.display = "grid";
@@ -431,8 +453,16 @@ function pergunta6() {
     doc.text(20, 40, "Resposta: " + escolhas[0]);
     doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
     doc.text(20, 60, "Resposta: " + escolhas[1]);
-    doc.text(70, 70, "Resultado: Tartaruga-Comum");
-    doc.addImage(tartarugaimg, "jpg", 30, 80, 150, 150);
+    doc.text(20, 70, "Pergunta 3: " + perguntas[2]);
+    doc.text(20, 80, "Resposta: " + escolhas[2]);
+    doc.text(20, 90, "Pergunta 4: " + perguntas[3]);
+    doc.text(20, 100, "Resposta: " + escolhas[3]);
+    doc.text(20, 110, "Pergunta 5: " + perguntas[4]);
+    doc.text(20, 120, "Resposta: " + escolhas[4]);
+    doc.text(20, 130, "Pergunta 6: " + perguntas[5]);
+    doc.text(20, 140, "Resposta: " + escolhas[5]);
+    doc.text(70, 150, "Resultado: Tartaruga-Comum");
+    doc.addImage(tartarugaimg, "jpg", 30, 160, 150, 150);
 
     document.getElementsByClassName("choice1")[0].style.display = "none";
     document.getElementsByClassName("choice")[0].style.display = "grid";
