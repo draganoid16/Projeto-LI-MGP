@@ -47,7 +47,6 @@ function downloadpdf() {
 }
 
 function downloadcsv() {
-  console.log(csv);
   // resolver caracteres especiais
   let csvContent = "data:text/csv;charset=utf-8,";
 
@@ -62,7 +61,9 @@ function downloadcsv() {
   window.location.assign(encodedUri);
   //window.open(encodedUri, 'asdas.csv');
 }
-
+function downloadjson(){
+  alert('nao encontrei ainda nada! Mas estava a tentar pesquisar para converter o CSV para jason e depois fazer download.')
+}
 pergunta1();
 
 function again() {
