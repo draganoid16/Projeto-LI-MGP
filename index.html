@@ -23,6 +23,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- CSV -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- Nav bar -->
@@ -219,7 +221,7 @@
             <p class="download">
               Faça o download dos resultados:
               <img class="download_icons"  onclick="downloadpdf()" src="resources/icons/pdf.png" alt="">
-              <img class="download_icons" src="resources/icons/csv.png" alt="">
+              <img class="download_icons" onclick="downloadcsv()" src="resources/icons/csv.png" alt="">
               <img class="download_icons" src="resources/icons/json.png" alt="">
             </p>
           </div>
@@ -239,7 +241,7 @@
             <p class="download">
               Faça o download dos resultados:
               <img class="download_icons" onclick="downloadpdf()" src="resources/icons/pdf.png" alt="">
-              <img class="download_icons" src="resources/icons/csv.png" alt="">
+              <img class="download_icons" onclick="downloadcsv()" src="resources/icons/csv.png" alt="">
               <img class="download_icons" src="resources/icons/json.png" alt="">
             </p>
           </div>
@@ -259,7 +261,7 @@
             <p class="download">
               Faça o download dos resultados:
               <img class="download_icons"  onclick="downloadpdf()" src="resources/icons/pdf.png" alt="">
-              <img class="download_icons" src="resources/icons/csv.png" alt="">
+              <img class="download_icons" onclick="downloadcsv()" src="resources/icons/csv.png" alt="">
               <img class="download_icons" src="resources/icons/json.png" alt="">
             </p>
           </div>
@@ -279,7 +281,7 @@
             <p class="download">
               Faça o download dos resultados:
               <img class="download_icons"  onclick="downloadpdf()" src="resources/icons/pdf.png" alt="">
-              <img class="download_icons" src="resources/icons/csv.png" alt="">
+              <img class="download_icons" onclick="downloadcsv()" src="resources/icons/csv.png" alt="">
               <img class="download_icons" src="resources/icons/json.png" alt="">
             </p>
           </div>
@@ -319,7 +321,7 @@
             <p class="download">
               Faça o download dos resultados:
               <img class="download_icons"  onclick="downloadpdf()" src="resources/icons/pdf.png" alt="">
-              <img class="download_icons" id="csv_download" src="resources/icons/csv.png" alt="">
+              <img class="download_icons" onclick="downloadcsv()" src="resources/icons/csv.png" alt="">
               <img class="download_icons" src="resources/icons/json.png" alt="">
             </p>
           </div>

@@ -27,14 +27,38 @@ const perguntas = [
 ];
 // csv é criado apenas com as perguntas que serão feitas.
 const csv = [
-  ["Jogo", perguntas[0], perguntas[1], perguntas[2], perguntas[3], perguntas[4], perguntas[5]]
+  [
+    "Jogo",
+    perguntas[0],
+    perguntas[1],
+    perguntas[2],
+    perguntas[3],
+    perguntas[4],
+    perguntas[5],
+    "Resultado",
+  ],
 ];
-console.log(csv); 
+
 var doc = new jsPDF();
 var pdf = document.getElementById("pdf");
 
 function downloadpdf() {
   doc.save("respostas.pdf");
+}
+
+function downloadcsv() {
+  let csvContent = "data:text/csv;charset=utf-8,";
+
+  csv.forEach(function (rowArray) {
+    let new_row = rowArray.join(",");
+    csvContent += new_row + "\r\n";
+  });
+
+  var encodedUri = encodeURI(csvContent);
+
+  // faz o mesmo que o windows.open
+  window.location.assign(encodedUri);
+  //window.open(encodedUri, 'asdas.csv');
 }
 
 pergunta1();
@@ -130,6 +154,17 @@ function pergunta2() {
         "cor " + escolhas[0] + "olhos movem-se autonomamente: " + escolhas[1];
 
       console.log(escolhas);
+      //csv
+      csv.push(
+        jogo,
+        escolhas[0],
+        escolhas[1],
+        "N/A",
+        "N/A",
+        "N/A",
+        "N/A",
+        "Camaleão-Comum"
+      );
 
       //adicionar animal ao pdf
       var camaleaoimg = new Image();
