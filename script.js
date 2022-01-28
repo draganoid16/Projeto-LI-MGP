@@ -187,8 +187,10 @@ function pergunta3() {
     doc.text(20, 40, "Resposta: " + escolhas[0]);
     doc.text(20, 50, "Pergunta 2: " + perguntas[1]);
     doc.text(20, 60, "Resposta: " + escolhas[1]);
-    doc.text(60, 70, "Resultado: Cobra-de-pernas-pentadáctila");
-    doc.addImage(cobraimg, "jpg", 30, 80, 150, 150);
+    doc.text(20, 70, "Pergunta 3: " + perguntas[2]);
+    doc.text(20, 80, "Resposta: " + escolhas[2]);
+    doc.text(50, 90, "Resultado: Cobra-de-pernas-pentadáctila");
+    doc.addImage(cobraimg, "jpg", 30, 100, 150, 150);
 
     document.getElementsByClassName("choice1")[0].style.display = "none";
     document.getElementsByClassName("choice")[0].style.display = "grid";

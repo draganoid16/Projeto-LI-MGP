@@ -49,6 +49,7 @@
   grid-row: 3;
   text-align: center;
   margin-top: 10vh;
+  display: none;
 }
 .botao_style1 {
   grid-column: col-start 3 / span 2;
