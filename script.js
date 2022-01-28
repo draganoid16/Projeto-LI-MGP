@@ -35,8 +35,8 @@ const csv = [
     perguntas[3],
     perguntas[4],
     perguntas[5],
-    "Resultado",
-  ],
+    "Resultado"
+  ]
 ];
 
 var doc = new jsPDF();
