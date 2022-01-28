@@ -47,13 +47,15 @@ function downloadpdf() {
 }
 
 function downloadcsv() {
+  console.log(csv);
+  // resolver caracteres especiais
   let csvContent = "data:text/csv;charset=utf-8,";
 
   csv.forEach(function (rowArray) {
     let new_row = rowArray.join(",");
     csvContent += new_row + "\r\n";
   });
-
+  
   var encodedUri = encodeURI(csvContent);
 
   // faz o mesmo que o windows.open
@@ -154,17 +156,12 @@ function pergunta2() {
         "cor " + escolhas[0] + "olhos movem-se autonomamente: " + escolhas[1];
 
       console.log(escolhas);
-      //csv
-      csv.push(
-        jogo,
-        escolhas[0],
-        escolhas[1],
-        "N/A",
-        "N/A",
-        "N/A",
-        "N/A",
-        "Camaleão-Comum"
-      );
+      //adiciona as respostas a array do csv
+      const addRespostas = [
+        [jogo, escolhas[0], escolhas[1], "N/A", "N/A","N/A","N/A", "Camaleão-Comum"]
+      ]
+      
+      csv.push(addRespostas);
 
       //adicionar animal ao pdf
       var camaleaoimg = new Image();
@@ -217,6 +214,13 @@ function pergunta3() {
       escolhas[1] +
       "pernas:" +
       escolhas[2];
+
+    //adiciona as respostas a array do csv
+    const addRespostas = [
+      [jogo, escolhas[0], escolhas[1], escolhas[2], "N/A","N/A","N/A", "Cobra-Rateira"]
+    ]
+    csv.push(addRespostas);
+
     // adicionar o pdf da cobra
     var cobraimg = new Image();
     cobraimg.src = "resources/cobra.jpg";
@@ -292,6 +296,14 @@ function pergunta4() {
       "carapaça: " +
       escolhas[3];
     if (escolhas[0] == "Verde") {
+      
+      //adiciona as respostas a array do csv
+      const addRespostas = [
+        [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],"N/A","N/A", "Sardão"]
+      ]
+      csv.push(addRespostas);
+
+
       var sardaoimg = new Image();
       sardaoimg.src = "resources/sardao.jpg";
 
@@ -316,6 +328,14 @@ function pergunta4() {
       cagado_imagem.style.display = "none";
       tartaruga_imagem.style.display = "none";
     } else if (escolhas[0] == "Cinzento" || escolhas[0] == "Castanho") {
+
+      //adiciona as respostas a array do csv
+      const addRespostas = [
+        [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],"N/A","N/A", "Osga-Turca"]
+      ]
+      csv.push(addRespostas);
+      
+
       var osgaimg = new Image();
       osgaimg.src = "resources/osga.jpg";
 
@@ -383,6 +403,12 @@ function pergunta5() {
       "Ambiente: " +
       escolhas[4];
 
+    //adiciona as respostas a array do csv
+    const addRespostas = [
+      [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4],"N/A", "Cágado-Mediterrânico"]
+    ]
+    csv.push(addRespostas);
+
     var cagadoimg = new Image();
     cagadoimg.src = "resources/cagado.jpg";
 
@@ -439,6 +465,12 @@ function pergunta6() {
       escolhas[5];
     console.log(escolhas);
 
+    //adiciona as respostas a array do csv
+    const addRespostas = [
+      [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4], escolhas[5], "Cágado-Mediterrânico"]
+    ]
+    csv.push(addRespostas);
+
     var cagadoimg = new Image();
     cagadoimg.src = "resources/cagado.jpg";
 
@@ -483,6 +515,12 @@ function pergunta6() {
       "água: " +
       escolhas[5];
     console.log(escolhas);
+    
+    //adiciona as respostas a array do csv
+    const addRespostas = [
+      [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4], escolhas[5], "Tartaruga-Comum"]
+    ]
+    csv.push(addRespostas);
 
     var tartarugaimg = new Image();
     tartarugaimg.src = "resources/tartaruga.jpg";
