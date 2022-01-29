@@ -61,8 +61,29 @@ function downloadcsv() {
   window.location.assign(encodedUri);
   //window.open(encodedUri, 'asdas.csv');
 }
+
 function downloadjson(){
-  alert('nao encontrei ainda nada! Mas estava a tentar pesquisar para converter o CSV para jason e depois fazer download.')
+    // a melhor solução que encontrei foi: criar um csv e depois convert para json!
+    // cria o csv 
+    // resolver caracteres especiais
+    let csvContent = "data:text/csv;charset=utf-8,";
+
+    csv.forEach(function (rowArray) {
+      let new_row = rowArray.join(",");
+      csvContent += new_row + "\r\n";
+    });
+    
+    var encodedUri = encodeURI(csvContent);
+    // cria o json
+    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(encodedUri));
+    // cria um element (tag <a></a>) que vai permitir fazer o download
+    var downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href",     dataStr);
+    downloadAnchorNode.setAttribute("download", "respostas" + ".json");
+    document.body.appendChild(downloadAnchorNode); // required for firefox
+    downloadAnchorNode.click();
+    // depois de download o element criado é eliminado
+    downloadAnchorNode.remove();
 }
 pergunta1();
 
