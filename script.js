@@ -75,7 +75,7 @@ function downloadjson(){
     
     var encodedUri = encodeURI(csvContent);
     // cria o json
-    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(encodedUri));
+    var dataStr = "data:text/json;charset=utf-8," + decodeURIComponent(JSON.stringify(encodedUri));
     // cria um element (tag <a></a>) que vai permitir fazer o download
     var downloadAnchorNode = document.createElement('a');
     downloadAnchorNode.setAttribute("href",     dataStr);
