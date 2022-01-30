@@ -106,6 +106,8 @@ function again() {
 }
 
 botao_reset.onclick = function () {
+  jogo-=1;
+  botao_reset.style.display = "none";
   // como é a primeira pergunta este botao tem de voltar a desaparecer
   botao_anterior.style.display = "none";
   // volta a mostrar o botao 2
@@ -153,7 +155,7 @@ function pergunta2() {
   botao1.innerHTML = "Sim";
   botao2.style.display = "none";
   botao3.innerHTML = "Não";
-
+  botao_reset.style.display = "block";
   botao1.style.backgroundColor = "#2f5c50"; //mete uma cor nova
   botao3.style.backgroundColor = "#2f5c50";
 
