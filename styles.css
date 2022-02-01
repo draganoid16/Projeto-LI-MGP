@@ -124,8 +124,7 @@ legend:hover {
   margin-left: 9vw;
   margin-right: 9vw;
 }
-.other-pages-footer {
-}
+
 .links-footer-container {
   display: flex;
   flex-direction: column;
@@ -153,17 +152,7 @@ legend:hover {
 #copyright {
   font-size: 23px;
 }
-/*
-.biologist-text{
-    border: 1px solid brown;
-    margin: 0 auto;
-    padding: 10vh;
-    text-align: center;
-    font-size: 3.5vh;
-    animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */ /*
-    animation-duration: 2s; /* don't forget to set a duration! */
-/*}
-*/
+
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -220,7 +209,6 @@ legend:hover {
 
 .topnav a.active {
   background-color: #426c54;
-  /*background-color: rgba(10, 28, 15, 255);*/
   color: white;
 }
 
@@ -561,3 +549,15 @@ legend:hover {
   color: #dfb982;
   text-decoration: underline;
 }
+
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+} /* reveal e reveal.active, classes para dar fade in e fade out da pagina
