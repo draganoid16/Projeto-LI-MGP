@@ -195,8 +195,15 @@
 .nao:hover,.sim:hover{
   text-decoration: underline;
 }
-
-.estatistica{
-  text-align: left;
+.estatistica-container{
+  display: flex;
+  justify-content: space-between;
+width: 90%;
+}
+.estatistica, .jogos-acertados{
+  display: none;
   font-size: large;
+  width: fit-content;
+  margin: 0 ;
+  padding: 0;
 }

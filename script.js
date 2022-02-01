@@ -19,6 +19,8 @@ var osga_imagem = document.getElementById("osga");
 var cagado_imagem = document.getElementById("cagado");
 var tartaruga_imagem = document.getElementById("tartaruga");
 var jogo = 0; // nr de jogos
+var jogo_correto = 0;
+
 const escolhas = [];
 const perguntas = [
   "De que cor é o seu animal?",
@@ -92,6 +94,20 @@ function downloadjson(){
 }
 pergunta1();
 
+function termina_jogo(){
+  let estatistica = document.getElementById("estatistica");
+  estatistica.style.display = "block";
+
+  let span_nr_jogos = document.getElementById("nr_jogos");
+  let span_nr_jogos_corretos = document.getElementById("nr_jogos_corretos");
+  let span_percentagem_de_acerto = document.getElementById("percentagem de acerto");
+  
+  span_nr_jogos.innerHTML = jogo;
+  span_nr_jogos_corretos.innerHTML = jogo_correto;
+  percentagem = ((jogo_correto/jogo)*100).toFixed(2);
+  
+  span_percentagem_de_acerto.innerHTML = percentagem + " %";
+}
 function again() {
   botao_anterior.style.display = "none";
   document.getElementsByClassName("choice")[0].style.display = "none";
@@ -185,7 +201,6 @@ function pergunta2() {
         "cor " + escolhas[0] + "olhos movem-se autonomamente: " + escolhas[1];
 
       console.log(escolhas);
-
       //adicionar animal ao pdf
       var camaleaoimg = new Image();
       camaleaoimg.src = "resources/camaleao.jpg";
@@ -204,6 +219,7 @@ function pergunta2() {
       document.getElementsByClassName("again")[0].style.display = "none";
       document.getElementsByClassName("download")[0].style.display = "none";
       confirmar_resposta_sim[0].onclick = function(){
+        jogo_correto+=1;
         doc.text(40, 90, "Acertámos no resultado!");
         //adiciona as respostas a array do csv
         const addRespostas = [
@@ -213,6 +229,7 @@ function pergunta2() {
         document.getElementsByClassName("confirmar_resposta")[0].style.display="none";
         document.getElementsByClassName("download")[0].style.display = "block";
         document.getElementsByClassName("again")[0].style.display = "inline-block";
+        termina_jogo();
       }
       confirmar_resposta_nao[0].onclick = function(){
         doc.text(40, 90, "Não acertámos no resultado!");
@@ -224,6 +241,7 @@ function pergunta2() {
         document.getElementsByClassName("confirmar_resposta")[0].style.display="none";
         document.getElementsByClassName("download")[0].style.display = "block";
         document.getElementsByClassName("again")[0].style.display = "inline-block";
+        termina_jogo();
       }
       
       //document.getElementsByClassName("download")[0].style.display = "none";
@@ -286,6 +304,7 @@ function pergunta3() {
     document.getElementsByClassName("download")[1].style.display = "none";
 
     confirmar_resposta_sim[1].onclick = function(){
+      jogo_correto+=1;
       doc.text(40, 100, "Acertámos no resultado!");
       //adiciona as respostas a array do csv
       const addRespostas = [
@@ -295,6 +314,7 @@ function pergunta3() {
       document.getElementsByClassName("confirmar_resposta")[1].style.display="none";
       document.getElementsByClassName("download")[1].style.display = "block";
       document.getElementsByClassName("again")[1].style.display = "inline-block";
+      termina_jogo();
     }
     confirmar_resposta_nao[1].onclick = function(){
       doc.text(40, 100, "Não acertámos no resultado!");
@@ -306,6 +326,7 @@ function pergunta3() {
       document.getElementsByClassName("confirmar_resposta")[1].style.display="none";
       document.getElementsByClassName("download")[1].style.display = "block";
       document.getElementsByClassName("again")[1].style.display = "inline-block";
+      termina_jogo();
     }
     cobra_imagem.style.display = "block";
     camaleao_imagem.style.display = "none";
@@ -334,7 +355,7 @@ function pergunta4() {
   frase.innerHTML = perguntas[3];
   botao1.innerHTML = "Sim";
   botao2.style.display = "none";
-  botao3.innerHTML = "Nao";
+  botao3.innerHTML = "Não";
   //se clicar no anterior vai para a pergunta atras
   botao_anterior.onclick = function () {
     escolhas[2] = "";
@@ -388,6 +409,7 @@ function pergunta4() {
       document.getElementsByClassName("again")[2].style.display = "none";  
       document.getElementsByClassName("download")[2].style.display = "none";
       confirmar_resposta_sim[2].onclick = function(){
+        jogo_correto+=1;
         doc.text(40, 120, "Acertámos no resultado!");
         //adiciona as respostas a array do csv
         const addRespostas = [
@@ -397,6 +419,7 @@ function pergunta4() {
         document.getElementsByClassName("confirmar_resposta")[2].style.display="none";
         document.getElementsByClassName("download")[2].style.display = "block";
         document.getElementsByClassName("again")[2].style.display = "inline-block";
+        termina_jogo();
       }
       confirmar_resposta_nao[2].onclick = function(){
         doc.text(40, 120, "Não acertámos no resultado!");
@@ -408,6 +431,7 @@ function pergunta4() {
         document.getElementsByClassName("confirmar_resposta")[2].style.display="none";
         document.getElementsByClassName("download")[2].style.display = "block";
         document.getElementsByClassName("again")[2].style.display = "inline-block";
+        termina_jogo();
       }
 
       sardao_imagem.style.display = "block";
@@ -439,6 +463,7 @@ function pergunta4() {
       document.getElementsByClassName("again")[3].style.display = "none";  
       document.getElementsByClassName("download")[3].style.display = "none";
       confirmar_resposta_sim[3].onclick = function(){
+        jogo_correto+=1;
         doc.text(40, 120, "Acertámos no resultado!");
         //adiciona as respostas a array do csv
         const addRespostas = [
@@ -448,6 +473,7 @@ function pergunta4() {
         document.getElementsByClassName("confirmar_resposta")[3].style.display="none";
         document.getElementsByClassName("download")[3].style.display = "block";
         document.getElementsByClassName("again")[3].style.display = "inline-block";
+        termina_jogo();
       }
       confirmar_resposta_nao[3].onclick = function(){
         doc.text(40, 120, "Não acertámos no resultado!");
@@ -459,6 +485,7 @@ function pergunta4() {
         document.getElementsByClassName("confirmar_resposta")[3].style.display="none";
         document.getElementsByClassName("download")[3].style.display = "block";
         document.getElementsByClassName("again")[3].style.display = "inline-block";
+        termina_jogo();
       }
 
       osga_imagem.style.display = "block";
@@ -534,6 +561,7 @@ function pergunta5() {
     document.getElementsByClassName("again")[4].style.display = "none";  
     document.getElementsByClassName("download")[4].style.display = "none";
     confirmar_resposta_sim[4].onclick = function(){
+      jogo_correto+=1;
       doc.text(40, 140, "Acertámos no resultado!");
       //adiciona as respostas a array do csv
       const addRespostas = [
@@ -543,6 +571,7 @@ function pergunta5() {
       document.getElementsByClassName("confirmar_resposta")[4].style.display="none";
       document.getElementsByClassName("download")[4].style.display = "block";
       document.getElementsByClassName("again")[4].style.display = "inline-block";
+      termina_jogo();
     }
     confirmar_resposta_nao[4].onclick = function(){
       doc.text(40, 140, "Não acertámos no resultado!");
@@ -554,6 +583,7 @@ function pergunta5() {
       document.getElementsByClassName("confirmar_resposta")[4].style.display="none";
       document.getElementsByClassName("download")[4].style.display = "block";
       document.getElementsByClassName("again")[4].style.display = "inline-block";
+      termina_jogo();
     }
 
     cagado_imagem.style.display = "block";
@@ -618,6 +648,7 @@ function pergunta6() {
     document.getElementsByClassName("again")[4].style.display = "none";  
     document.getElementsByClassName("download")[4].style.display = "none";
     confirmar_resposta_sim[4].onclick = function(){
+      jogo_correto+=1;
       doc.text(40, 160, "Acertámos no resultado!");
       //adiciona as respostas a array do csv
       const addRespostas = [
@@ -627,6 +658,7 @@ function pergunta6() {
       document.getElementsByClassName("confirmar_resposta")[4].style.display="none";
       document.getElementsByClassName("download")[4].style.display = "block";
       document.getElementsByClassName("again")[4].style.display = "inline-block";
+      termina_jogo();
     }
     confirmar_resposta_nao[4].onclick = function(){
       doc.text(40, 160, "Não acertámos no resultado!");
@@ -638,6 +670,7 @@ function pergunta6() {
       document.getElementsByClassName("confirmar_resposta")[4].style.display="none";
       document.getElementsByClassName("download")[4].style.display = "block";
       document.getElementsByClassName("again")[4].style.display = "inline-block";
+      termina_jogo();
     }
     cagado_imagem.style.display = "block";
     osga_imagem.style.display = "none";
@@ -688,6 +721,7 @@ function pergunta6() {
     document.getElementsByClassName("again")[5].style.display = "none";  
     document.getElementsByClassName("download")[5].style.display = "none";
     confirmar_resposta_sim[5].onclick = function(){
+      jogo_correto+=1;
       doc.text(40, 160, "Acertámos no resultado!");
       //adiciona as respostas a array do csv
       const addRespostas = [
@@ -697,6 +731,7 @@ function pergunta6() {
       document.getElementsByClassName("confirmar_resposta")[5].style.display="none";
       document.getElementsByClassName("download")[5].style.display = "block";
       document.getElementsByClassName("again")[5].style.display = "inline-block";
+      termina_jogo();
     }
     confirmar_resposta_nao[5].onclick = function(){
       doc.text(40, 160, "Acertámos no resultado!");
@@ -707,6 +742,7 @@ function pergunta6() {
       document.getElementsByClassName("confirmar_resposta")[5].style.display="none";
       document.getElementsByClassName("download")[5].style.display = "block";
       document.getElementsByClassName("again")[5].style.display = "inline-block";
+      termina_jogo();
     }
 
     tartaruga_imagem.style.display = "block";
