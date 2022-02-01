@@ -9,6 +9,9 @@ var botao2 = document.getElementById("botao_castanho");
 var botao3 = document.getElementById("botao_verde");
 var frase = document.getElementById("pergunta1");
 
+const confirmar_resposta_sim = document.getElementsByClassName("sim");
+const confirmar_resposta_nao = document.getElementsByClassName("nao");
+
 var camaleao_imagem = document.getElementById("camaleao");
 var cobra_imagem = document.getElementById("cobra");
 var sardao_imagem = document.getElementById("sardao");
@@ -35,12 +38,14 @@ const csv = [
     perguntas[3],
     perguntas[4],
     perguntas[5],
-    "Resultado"
+    "Resultado",
+    "Acertou corretamente?"
   ]
 ];
 
 var doc = new jsPDF();
 var pdf = document.getElementById("pdf");
+botao_reset.style.display ="none";
 
 function downloadpdf() {
   doc.save("respostas.pdf");
@@ -48,7 +53,7 @@ function downloadpdf() {
 
 function downloadcsv() {
   // resolver caracteres especiais
-  let csvContent = "data:text/csv;charset=utf-8,";
+  let csvContent = "data:text/csv;charset=ISO-8859-1,"; // O excel é que abre mal, os caracteres estão bons
 
   csv.forEach(function (rowArray) {
     let new_row = rowArray.join(",");
@@ -180,12 +185,6 @@ function pergunta2() {
         "cor " + escolhas[0] + "olhos movem-se autonomamente: " + escolhas[1];
 
       console.log(escolhas);
-      //adiciona as respostas a array do csv
-      const addRespostas = [
-        [jogo, escolhas[0], escolhas[1], "N/A", "N/A","N/A","N/A", "Camaleão-Comum"]
-      ]
-      
-      csv.push(addRespostas);
 
       //adicionar animal ao pdf
       var camaleaoimg = new Image();
@@ -198,9 +197,34 @@ function pergunta2() {
       doc.text(20, 60, "Resposta: " + escolhas[1]);
       doc.text(70, 70, "Resultado: Camaleão-Comum");
       doc.addImage(camaleaoimg, "jpg", 30, 80, 150, 150);
-
+      
       document.getElementsByClassName("choice1")[0].style.display = "none";
       document.getElementsByClassName("choice")[0].style.display = "grid";
+      document.getElementsByClassName("confirmar_resposta")[0].style.display="block";
+      document.getElementsByClassName("again")[0].style.display = "none";
+      document.getElementsByClassName("download")[0].style.display = "none";
+      confirmar_resposta_sim[0].onclick = function(){
+        //adiciona as respostas a array do csv
+        const addRespostas = [
+          [jogo, escolhas[0], escolhas[1], "N/A", "N/A","N/A","N/A", "Camaleão-Comum", "Sim"]
+        ]
+        csv.push(addRespostas);
+        document.getElementsByClassName("confirmar_resposta")[0].style.display="none";
+        document.getElementsByClassName("download")[0].style.display = "block";
+        document.getElementsByClassName("again")[0].style.display = "inline-block";
+      }
+      confirmar_resposta_nao[0].onclick = function(){
+        //adiciona as respostas a array do csv
+        const addRespostas = [
+          [jogo, escolhas[0], escolhas[1], "N/A", "N/A","N/A","N/A", "Camaleão-Comum", "Não"]
+        ]
+        csv.push(addRespostas);
+        document.getElementsByClassName("confirmar_resposta")[0].style.display="none";
+        document.getElementsByClassName("download")[0].style.display = "block";
+        document.getElementsByClassName("again")[0].style.display = "inline-block";
+      }
+      
+      //document.getElementsByClassName("download")[0].style.display = "none";
       camaleao_imagem.style.display = "block";
       cobra_imagem.style.display = "none";
       sardao_imagem.style.display = "none";
@@ -239,12 +263,6 @@ function pergunta3() {
       "pernas:" +
       escolhas[2];
 
-    //adiciona as respostas a array do csv
-    const addRespostas = [
-      [jogo, escolhas[0], escolhas[1], escolhas[2], "N/A","N/A","N/A", "Cobra-Rateira"]
-    ]
-    csv.push(addRespostas);
-
     // adicionar o pdf da cobra
     var cobraimg = new Image();
     cobraimg.src = "resources/cobra.jpg";
@@ -261,6 +279,30 @@ function pergunta3() {
 
     document.getElementsByClassName("choice1")[0].style.display = "none";
     document.getElementsByClassName("choice")[0].style.display = "grid";
+    document.getElementsByClassName("confirmar_resposta")[1].style.display="block";
+    document.getElementsByClassName("again")[1].style.display = "none";  
+    document.getElementsByClassName("download")[1].style.display = "none";
+
+    confirmar_resposta_sim[1].onclick = function(){
+      //adiciona as respostas a array do csv
+      const addRespostas = [
+        [jogo, escolhas[0], escolhas[1], escolhas[2], "N/A","N/A","N/A", "Cobra-Rateira", "Sim"]
+      ]
+      csv.push(addRespostas);
+      document.getElementsByClassName("confirmar_resposta")[1].style.display="none";
+      document.getElementsByClassName("download")[1].style.display = "block";
+      document.getElementsByClassName("again")[1].style.display = "inline-block";
+    }
+    confirmar_resposta_nao[1].onclick = function(){
+      //adiciona as respostas a array do csv
+      const addRespostas = [
+        [jogo, escolhas[0], escolhas[1], escolhas[2], "N/A","N/A","N/A", "Cobra-Rateira", "Não"]
+      ]
+      csv.push(addRespostas);
+      document.getElementsByClassName("confirmar_resposta")[1].style.display="none";
+      document.getElementsByClassName("download")[1].style.display = "block";
+      document.getElementsByClassName("again")[1].style.display = "inline-block";
+    }
     cobra_imagem.style.display = "block";
     camaleao_imagem.style.display = "none";
     sardao_imagem.style.display = "none";
@@ -320,13 +362,6 @@ function pergunta4() {
       "carapaça: " +
       escolhas[3];
     if (escolhas[0] == "Verde") {
-      
-      //adiciona as respostas a array do csv
-      const addRespostas = [
-        [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],"N/A","N/A", "Sardão"]
-      ]
-      csv.push(addRespostas);
-
 
       var sardaoimg = new Image();
       sardaoimg.src = "resources/sardao.jpg";
@@ -345,20 +380,37 @@ function pergunta4() {
 
       document.getElementsByClassName("choice1")[0].style.display = "none";
       document.getElementsByClassName("choice")[0].style.display = "grid";
+      document.getElementsByClassName("confirmar_resposta")[2].style.display="block";
+      document.getElementsByClassName("again")[2].style.display = "none";  
+      document.getElementsByClassName("download")[2].style.display = "none";
+      confirmar_resposta_sim[2].onclick = function(){
+        //adiciona as respostas a array do csv
+        const addRespostas = [
+          [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],"N/A","N/A", "Sardão", "Sim"]
+        ]
+        csv.push(addRespostas);
+        document.getElementsByClassName("confirmar_resposta")[2].style.display="none";
+        document.getElementsByClassName("download")[2].style.display = "block";
+        document.getElementsByClassName("again")[2].style.display = "inline-block";
+      }
+      confirmar_resposta_nao[2].onclick = function(){
+        //adiciona as respostas a array do csv
+        const addRespostas = [
+          [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],"N/A","N/A", "Sardão", "Não"]
+        ]
+        csv.push(addRespostas);
+        document.getElementsByClassName("confirmar_resposta")[2].style.display="none";
+        document.getElementsByClassName("download")[2].style.display = "block";
+        document.getElementsByClassName("again")[2].style.display = "inline-block";
+      }
+
       sardao_imagem.style.display = "block";
       cobra_imagem.style.display = "none";
       camaleao_imagem.style.display = "none";
       osga_imagem.style.display = "none";
       cagado_imagem.style.display = "none";
       tartaruga_imagem.style.display = "none";
-    } else if (escolhas[0] == "Cinzento" || escolhas[0] == "Castanho") {
-
-      //adiciona as respostas a array do csv
-      const addRespostas = [
-        [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],"N/A","N/A", "Osga-Turca"]
-      ]
-      csv.push(addRespostas);
-      
+    } else if (escolhas[0] == "Cinzento" || escolhas[0] == "Castanho") {      
 
       var osgaimg = new Image();
       osgaimg.src = "resources/osga.jpg";
@@ -377,6 +429,30 @@ function pergunta4() {
 
       document.getElementsByClassName("choice1")[0].style.display = "none";
       document.getElementsByClassName("choice")[0].style.display = "grid";
+      document.getElementsByClassName("confirmar_resposta")[3].style.display="block";
+      document.getElementsByClassName("again")[3].style.display = "none";  
+      document.getElementsByClassName("download")[3].style.display = "none";
+      confirmar_resposta_sim[3].onclick = function(){
+        //adiciona as respostas a array do csv
+        const addRespostas = [
+          [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],"N/A","N/A", "Osga-Turca", "Sim"]
+        ]
+        csv.push(addRespostas);
+        document.getElementsByClassName("confirmar_resposta")[3].style.display="none";
+        document.getElementsByClassName("download")[3].style.display = "block";
+        document.getElementsByClassName("again")[3].style.display = "inline-block";
+      }
+      confirmar_resposta_nao[3].onclick = function(){
+        //adiciona as respostas a array do csv
+        const addRespostas = [
+          [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],"N/A","N/A", "Osga-Turca", "Não"]
+        ]
+        csv.push(addRespostas);
+        document.getElementsByClassName("confirmar_resposta")[3].style.display="none";
+        document.getElementsByClassName("download")[3].style.display = "block";
+        document.getElementsByClassName("again")[3].style.display = "inline-block";
+      }
+
       osga_imagem.style.display = "block";
       sardao_imagem.style.display = "none";
       cobra_imagem.style.display = "none";
@@ -427,12 +503,6 @@ function pergunta5() {
       "Ambiente: " +
       escolhas[4];
 
-    //adiciona as respostas a array do csv
-    const addRespostas = [
-      [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4],"N/A", "Cágado-Mediterrânico"]
-    ]
-    csv.push(addRespostas);
-
     var cagadoimg = new Image();
     cagadoimg.src = "resources/cagado.jpg";
 
@@ -452,6 +522,30 @@ function pergunta5() {
 
     document.getElementsByClassName("choice1")[0].style.display = "none";
     document.getElementsByClassName("choice")[0].style.display = "grid";
+    document.getElementsByClassName("confirmar_resposta")[4].style.display="block";
+    document.getElementsByClassName("again")[4].style.display = "none";  
+    document.getElementsByClassName("download")[4].style.display = "none";
+    confirmar_resposta_sim[4].onclick = function(){
+      //adiciona as respostas a array do csv
+      const addRespostas = [
+        [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4],"N/A", "Cágado-Mediterrânico", "Sim"]
+      ]
+      csv.push(addRespostas);
+      document.getElementsByClassName("confirmar_resposta")[4].style.display="none";
+      document.getElementsByClassName("download")[4].style.display = "block";
+      document.getElementsByClassName("again")[4].style.display = "inline-block";
+    }
+    confirmar_resposta_nao[4].onclick = function(){
+      //adiciona as respostas a array do csv
+      const addRespostas = [
+        [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4],"N/A", "Cágado-Mediterrânico", "Não"]
+      ]
+      csv.push(addRespostas);
+      document.getElementsByClassName("confirmar_resposta")[4].style.display="none";
+      document.getElementsByClassName("download")[4].style.display = "block";
+      document.getElementsByClassName("again")[4].style.display = "inline-block";
+    }
+
     cagado_imagem.style.display = "block";
     osga_imagem.style.display = "none";
     sardao_imagem.style.display = "none";
@@ -489,12 +583,6 @@ function pergunta6() {
       escolhas[5];
     console.log(escolhas);
 
-    //adiciona as respostas a array do csv
-    const addRespostas = [
-      [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4], escolhas[5], "Cágado-Mediterrânico"]
-    ]
-    csv.push(addRespostas);
-
     var cagadoimg = new Image();
     cagadoimg.src = "resources/cagado.jpg";
 
@@ -516,6 +604,29 @@ function pergunta6() {
 
     document.getElementsByClassName("choice1")[0].style.display = "none";
     document.getElementsByClassName("choice")[0].style.display = "grid";
+    document.getElementsByClassName("confirmar_resposta")[4].style.display="block";
+    document.getElementsByClassName("again")[4].style.display = "none";  
+    document.getElementsByClassName("download")[4].style.display = "none";
+    confirmar_resposta_sim[4].onclick = function(){
+      //adiciona as respostas a array do csv
+      const addRespostas = [
+        [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4], escolhas[5], "Cágado-Mediterrânico", "Sim"]
+      ]
+      csv.push(addRespostas);
+      document.getElementsByClassName("confirmar_resposta")[4].style.display="none";
+      document.getElementsByClassName("download")[4].style.display = "block";
+      document.getElementsByClassName("again")[4].style.display = "inline-block";
+    }
+    confirmar_resposta_nao[4].onclick = function(){
+      //adiciona as respostas a array do csv
+      const addRespostas = [
+        [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4], escolhas[5], "Cágado-Mediterrânico", "Não"]
+      ]
+      csv.push(addRespostas);
+      document.getElementsByClassName("confirmar_resposta")[4].style.display="none";
+      document.getElementsByClassName("download")[4].style.display = "block";
+      document.getElementsByClassName("again")[4].style.display = "inline-block";
+    }
     cagado_imagem.style.display = "block";
     osga_imagem.style.display = "none";
     sardao_imagem.style.display = "none";
@@ -539,12 +650,6 @@ function pergunta6() {
       "água: " +
       escolhas[5];
     console.log(escolhas);
-    
-    //adiciona as respostas a array do csv
-    const addRespostas = [
-      [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4], escolhas[5], "Tartaruga-Comum"]
-    ]
-    csv.push(addRespostas);
 
     var tartarugaimg = new Image();
     tartarugaimg.src = "resources/tartaruga.jpg";
@@ -567,6 +672,29 @@ function pergunta6() {
 
     document.getElementsByClassName("choice1")[0].style.display = "none";
     document.getElementsByClassName("choice")[0].style.display = "grid";
+    document.getElementsByClassName("confirmar_resposta")[5].style.display="block";
+    document.getElementsByClassName("again")[5].style.display = "none";  
+    document.getElementsByClassName("download")[5].style.display = "none";
+    confirmar_resposta_sim[5].onclick = function(){
+      //adiciona as respostas a array do csv
+      const addRespostas = [
+        [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4], escolhas[5], "Tartaruga-Comum", "Sim"]
+      ]
+      csv.push(addRespostas);
+      document.getElementsByClassName("confirmar_resposta")[5].style.display="none";
+      document.getElementsByClassName("download")[5].style.display = "block";
+      document.getElementsByClassName("again")[5].style.display = "inline-block";
+    }
+    confirmar_resposta_nao[5].onclick = function(){
+      //adiciona as respostas a array do csv
+      const addRespostas = [
+        [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4], escolhas[5], "Tartaruga-Comum", "Não"]
+      ]
+      document.getElementsByClassName("confirmar_resposta")[5].style.display="none";
+      document.getElementsByClassName("download")[5].style.display = "block";
+      document.getElementsByClassName("again")[5].style.display = "inline-block";
+    }
+
     tartaruga_imagem.style.display = "block";
     cagado_imagem.style.display = "none";
     osga_imagem.style.display = "none";

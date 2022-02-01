@@ -116,7 +116,6 @@
   width: max-content;
   padding-left: 10px;
   padding-right: 10px;
-  display: none;
 }
 
 .botao_reset:active,
@@ -170,4 +169,29 @@
 }
 .again:hover {
   text-decoration: underline 2px;
+}
+
+.sim{
+  cursor: pointer;
+  height: 5vh;
+  min-width: 4vw;
+  border: 1px dashed rgb(0, 0, 0);
+  font-size: 12px;
+  background-color: #0e881e;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.nao{
+  cursor: pointer;
+  height: 5vh;
+  min-width: 4vw;
+  border: 1px dashed rgb(0, 0, 0);
+  font-size: 12px;
+  background-color: #c92222;
+  border-radius: 10px;
+}
+
+.nao:hover,.sim:hover{
+  text-decoration: underline;
 }
