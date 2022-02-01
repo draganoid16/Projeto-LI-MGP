@@ -204,6 +204,7 @@ function pergunta2() {
       document.getElementsByClassName("again")[0].style.display = "none";
       document.getElementsByClassName("download")[0].style.display = "none";
       confirmar_resposta_sim[0].onclick = function(){
+        doc.text(40, 90, "Acertámos no resultado!");
         //adiciona as respostas a array do csv
         const addRespostas = [
           [jogo, escolhas[0], escolhas[1], "N/A", "N/A","N/A","N/A", "Camaleão-Comum", "Sim"]
@@ -214,6 +215,7 @@ function pergunta2() {
         document.getElementsByClassName("again")[0].style.display = "inline-block";
       }
       confirmar_resposta_nao[0].onclick = function(){
+        doc.text(40, 90, "Não acertámos no resultado!");
         //adiciona as respostas a array do csv
         const addRespostas = [
           [jogo, escolhas[0], escolhas[1], "N/A", "N/A","N/A","N/A", "Camaleão-Comum", "Não"]
@@ -284,6 +286,7 @@ function pergunta3() {
     document.getElementsByClassName("download")[1].style.display = "none";
 
     confirmar_resposta_sim[1].onclick = function(){
+      doc.text(40, 100, "Acertámos no resultado!");
       //adiciona as respostas a array do csv
       const addRespostas = [
         [jogo, escolhas[0], escolhas[1], escolhas[2], "N/A","N/A","N/A", "Cobra-Rateira", "Sim"]
@@ -294,6 +297,7 @@ function pergunta3() {
       document.getElementsByClassName("again")[1].style.display = "inline-block";
     }
     confirmar_resposta_nao[1].onclick = function(){
+      doc.text(40, 100, "Não acertámos no resultado!");
       //adiciona as respostas a array do csv
       const addRespostas = [
         [jogo, escolhas[0], escolhas[1], escolhas[2], "N/A","N/A","N/A", "Cobra-Rateira", "Não"]
@@ -384,6 +388,7 @@ function pergunta4() {
       document.getElementsByClassName("again")[2].style.display = "none";  
       document.getElementsByClassName("download")[2].style.display = "none";
       confirmar_resposta_sim[2].onclick = function(){
+        doc.text(40, 120, "Acertámos no resultado!");
         //adiciona as respostas a array do csv
         const addRespostas = [
           [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],"N/A","N/A", "Sardão", "Sim"]
@@ -394,6 +399,7 @@ function pergunta4() {
         document.getElementsByClassName("again")[2].style.display = "inline-block";
       }
       confirmar_resposta_nao[2].onclick = function(){
+        doc.text(40, 120, "Não acertámos no resultado!");
         //adiciona as respostas a array do csv
         const addRespostas = [
           [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],"N/A","N/A", "Sardão", "Não"]
@@ -433,6 +439,7 @@ function pergunta4() {
       document.getElementsByClassName("again")[3].style.display = "none";  
       document.getElementsByClassName("download")[3].style.display = "none";
       confirmar_resposta_sim[3].onclick = function(){
+        doc.text(40, 120, "Acertámos no resultado!");
         //adiciona as respostas a array do csv
         const addRespostas = [
           [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],"N/A","N/A", "Osga-Turca", "Sim"]
@@ -443,6 +450,7 @@ function pergunta4() {
         document.getElementsByClassName("again")[3].style.display = "inline-block";
       }
       confirmar_resposta_nao[3].onclick = function(){
+        doc.text(40, 120, "Não acertámos no resultado!");
         //adiciona as respostas a array do csv
         const addRespostas = [
           [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],"N/A","N/A", "Osga-Turca", "Não"]
@@ -526,6 +534,7 @@ function pergunta5() {
     document.getElementsByClassName("again")[4].style.display = "none";  
     document.getElementsByClassName("download")[4].style.display = "none";
     confirmar_resposta_sim[4].onclick = function(){
+      doc.text(40, 140, "Acertámos no resultado!");
       //adiciona as respostas a array do csv
       const addRespostas = [
         [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4],"N/A", "Cágado-Mediterrânico", "Sim"]
@@ -536,6 +545,7 @@ function pergunta5() {
       document.getElementsByClassName("again")[4].style.display = "inline-block";
     }
     confirmar_resposta_nao[4].onclick = function(){
+      doc.text(40, 140, "Não acertámos no resultado!");
       //adiciona as respostas a array do csv
       const addRespostas = [
         [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4],"N/A", "Cágado-Mediterrânico", "Não"]
@@ -608,6 +618,7 @@ function pergunta6() {
     document.getElementsByClassName("again")[4].style.display = "none";  
     document.getElementsByClassName("download")[4].style.display = "none";
     confirmar_resposta_sim[4].onclick = function(){
+      doc.text(40, 160, "Acertámos no resultado!");
       //adiciona as respostas a array do csv
       const addRespostas = [
         [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4], escolhas[5], "Cágado-Mediterrânico", "Sim"]
@@ -618,6 +629,7 @@ function pergunta6() {
       document.getElementsByClassName("again")[4].style.display = "inline-block";
     }
     confirmar_resposta_nao[4].onclick = function(){
+      doc.text(40, 160, "Não acertámos no resultado!");
       //adiciona as respostas a array do csv
       const addRespostas = [
         [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4], escolhas[5], "Cágado-Mediterrânico", "Não"]
@@ -676,6 +688,7 @@ function pergunta6() {
     document.getElementsByClassName("again")[5].style.display = "none";  
     document.getElementsByClassName("download")[5].style.display = "none";
     confirmar_resposta_sim[5].onclick = function(){
+      doc.text(40, 160, "Acertámos no resultado!");
       //adiciona as respostas a array do csv
       const addRespostas = [
         [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4], escolhas[5], "Tartaruga-Comum", "Sim"]
@@ -686,6 +699,7 @@ function pergunta6() {
       document.getElementsByClassName("again")[5].style.display = "inline-block";
     }
     confirmar_resposta_nao[5].onclick = function(){
+      doc.text(40, 160, "Acertámos no resultado!");
       //adiciona as respostas a array do csv
       const addRespostas = [
         [jogo, escolhas[0], escolhas[1], escolhas[2], escolhas[3],escolhas[4], escolhas[5], "Tartaruga-Comum", "Não"]
