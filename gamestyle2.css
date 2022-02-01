@@ -195,3 +195,8 @@
 .nao:hover,.sim:hover{
   text-decoration: underline;
 }
+
+.estatistica{
+  text-align: left;
+  font-size: large;
+}
