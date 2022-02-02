@@ -125,6 +125,14 @@ function termina_jogo(){
   
   span_percentagem_de_acerto.innerHTML = percentagem + " %";
 }
+function mostra_animal_classificado(animal_para_mostrar){
+  /*let animal_classificado = document.getElementById("animal_classificado");
+  
+  document.getElementById("container_animal_avaliados").style.display = "block";
+  animal_classificado.innerHTML = "asd";
+  //animal_classificado-innerHeight += '<img src=resources/'+ animal_para_mostrar + '.jpg" class="animal_classicado">'
+  */
+}
 function again() {
   botao_anterior.style.display = "none";
   document.getElementsByClassName("choice")[0].style.display = "none";
@@ -260,7 +268,7 @@ function pergunta2() {
         document.getElementsByClassName("again")[0].style.display = "inline-block";
         termina_jogo();
       }
-      
+      mostra_animal_classificado(cagado);
       //document.getElementsByClassName("download")[0].style.display = "none";
       camaleao_imagem.style.display = "block";
       cobra_imagem.style.display = "none";
