@@ -207,3 +207,11 @@ width: 90%;
   margin: 0 ;
   padding: 0;
 }
+
+.animais_avaliados{
+  background-color: #191B1A;
+  color: #8D8D8D;
+  padding: 1.5vh;
+  border-radius: 10px;
+}
+
