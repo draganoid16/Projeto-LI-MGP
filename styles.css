@@ -443,6 +443,7 @@ legend:hover {
 }
 .link_footer:hover {
   text-decoration: underline;
+  color: #c5c5c5;
   z-index: 100000;
 }
 
@@ -553,11 +554,11 @@ legend:hover {
 
 .reveal{
   position: relative;
-  transform: translateY(150px);
+  transform: translateX(150px);
   opacity: 0;
   transition: 2s all ease;
 }
 .reveal.active{
-  transform: translateY(0);
+  transform: translateX(0);
   opacity: 1;
 } /* reveal e reveal.active, classes para dar fade in e fade out da pagina
