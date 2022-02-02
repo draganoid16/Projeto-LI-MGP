@@ -213,9 +213,13 @@ width: 90%;
   color: #8D8D8D;
   padding: 1.5vh;
   border-radius: 10px;
+  margin-top: 20px;
   display: none;
 }
 
-.animal_classicado{
-  width: 50px; height: auto; margin:5px 5px;
+.animal_classificado_certo{
+  width: 50px; height: 50px; margin:5px 5px; border: 3px solid green; 
+}
+.animal_classificado_errado{
+  width: 50px; height: 50px; margin:5px 5px; border: 3px solid red;  
 }

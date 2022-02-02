@@ -125,13 +125,23 @@ function termina_jogo(){
   
   span_percentagem_de_acerto.innerHTML = percentagem + " %";
 }
-function mostra_animal_classificado(animal_para_mostrar){
-  /*let animal_classificado = document.getElementById("animal_classificado");
-  
+function mostra_animal_classificado(animal_para_mostrar, resultado){
   document.getElementById("container_animal_avaliados").style.display = "block";
-  animal_classificado.innerHTML = "asd";
-  //animal_classificado-innerHeight += '<img src=resources/'+ animal_para_mostrar + '.jpg" class="animal_classicado">'
-  */
+  var imagEscolhida = document.createElement("img");
+  let scr_animal_para_mostrar = "resources/"+animal_para_mostrar+".jpg"; 
+  //imagEscolhida.setAttribute("src", "resources/cagado.jpg");
+  imagEscolhida.src = scr_animal_para_mostrar;
+  
+  
+  if(resultado==="certo"){
+    imagEscolhida.setAttribute("class", "animal_classificado_certo");
+  }else if(resultado==="errado"){
+    imagEscolhida.setAttribute("class", "animal_classificado_errado");
+    
+  }
+
+  document.getElementById("animal_classificado").appendChild(imagEscolhida);
+
 }
 function again() {
   botao_anterior.style.display = "none";
@@ -254,7 +264,9 @@ function pergunta2() {
         document.getElementsByClassName("confirmar_resposta")[0].style.display="none";
         document.getElementsByClassName("download")[0].style.display = "block";
         document.getElementsByClassName("again")[0].style.display = "inline-block";
+        mostra_animal_classificado("camaleao", "certo");
         termina_jogo();
+        
       }
       confirmar_resposta_nao[0].onclick = function(){
         doc.text(40, 90, "Não acertámos no resultado!");
@@ -266,9 +278,10 @@ function pergunta2() {
         document.getElementsByClassName("confirmar_resposta")[0].style.display="none";
         document.getElementsByClassName("download")[0].style.display = "block";
         document.getElementsByClassName("again")[0].style.display = "inline-block";
+        mostra_animal_classificado("camaleao", "errado");
         termina_jogo();
       }
-      mostra_animal_classificado(cagado);
+      
       //document.getElementsByClassName("download")[0].style.display = "none";
       camaleao_imagem.style.display = "block";
       cobra_imagem.style.display = "none";
@@ -339,6 +352,7 @@ function pergunta3() {
       document.getElementsByClassName("confirmar_resposta")[1].style.display="none";
       document.getElementsByClassName("download")[1].style.display = "block";
       document.getElementsByClassName("again")[1].style.display = "inline-block";
+      mostra_animal_classificado("cobra", "certo");
       termina_jogo();
     }
     confirmar_resposta_nao[1].onclick = function(){
@@ -351,6 +365,7 @@ function pergunta3() {
       document.getElementsByClassName("confirmar_resposta")[1].style.display="none";
       document.getElementsByClassName("download")[1].style.display = "block";
       document.getElementsByClassName("again")[1].style.display = "inline-block";
+      mostra_animal_classificado("cobra", "errado");
       termina_jogo();
     }
     cobra_imagem.style.display = "block";
@@ -444,6 +459,7 @@ function pergunta4() {
         document.getElementsByClassName("confirmar_resposta")[2].style.display="none";
         document.getElementsByClassName("download")[2].style.display = "block";
         document.getElementsByClassName("again")[2].style.display = "inline-block";
+        mostra_animal_classificado("sardao", "certo");
         termina_jogo();
       }
       confirmar_resposta_nao[2].onclick = function(){
@@ -456,6 +472,7 @@ function pergunta4() {
         document.getElementsByClassName("confirmar_resposta")[2].style.display="none";
         document.getElementsByClassName("download")[2].style.display = "block";
         document.getElementsByClassName("again")[2].style.display = "inline-block";
+        mostra_animal_classificado("sardao", "errado");
         termina_jogo();
       }
 
@@ -498,6 +515,7 @@ function pergunta4() {
         document.getElementsByClassName("confirmar_resposta")[3].style.display="none";
         document.getElementsByClassName("download")[3].style.display = "block";
         document.getElementsByClassName("again")[3].style.display = "inline-block";
+        mostra_animal_classificado("osga", "certo");
         termina_jogo();
       }
       confirmar_resposta_nao[3].onclick = function(){
@@ -510,6 +528,7 @@ function pergunta4() {
         document.getElementsByClassName("confirmar_resposta")[3].style.display="none";
         document.getElementsByClassName("download")[3].style.display = "block";
         document.getElementsByClassName("again")[3].style.display = "inline-block";
+        mostra_animal_classificado("osga", "errado");
         termina_jogo();
       }
 
@@ -596,6 +615,7 @@ function pergunta5() {
       document.getElementsByClassName("confirmar_resposta")[4].style.display="none";
       document.getElementsByClassName("download")[4].style.display = "block";
       document.getElementsByClassName("again")[4].style.display = "inline-block";
+      mostra_animal_classificado("cagado", "certo");
       termina_jogo();
     }
     confirmar_resposta_nao[4].onclick = function(){
@@ -608,6 +628,7 @@ function pergunta5() {
       document.getElementsByClassName("confirmar_resposta")[4].style.display="none";
       document.getElementsByClassName("download")[4].style.display = "block";
       document.getElementsByClassName("again")[4].style.display = "inline-block";
+      mostra_animal_classificado("cagado", "errado");
       termina_jogo();
     }
 
@@ -683,6 +704,7 @@ function pergunta6() {
       document.getElementsByClassName("confirmar_resposta")[4].style.display="none";
       document.getElementsByClassName("download")[4].style.display = "block";
       document.getElementsByClassName("again")[4].style.display = "inline-block";
+      mostra_animal_classificado("cagado", "certo");
       termina_jogo();
     }
     confirmar_resposta_nao[4].onclick = function(){
@@ -695,6 +717,7 @@ function pergunta6() {
       document.getElementsByClassName("confirmar_resposta")[4].style.display="none";
       document.getElementsByClassName("download")[4].style.display = "block";
       document.getElementsByClassName("again")[4].style.display = "inline-block";
+      mostra_animal_classificado("cagado", "errado");
       termina_jogo();
     }
     cagado_imagem.style.display = "block";
@@ -756,6 +779,7 @@ function pergunta6() {
       document.getElementsByClassName("confirmar_resposta")[5].style.display="none";
       document.getElementsByClassName("download")[5].style.display = "block";
       document.getElementsByClassName("again")[5].style.display = "inline-block";
+      mostra_animal_classificado("tartaruga", "certo");
       termina_jogo();
     }
     confirmar_resposta_nao[5].onclick = function(){
@@ -767,6 +791,7 @@ function pergunta6() {
       document.getElementsByClassName("confirmar_resposta")[5].style.display="none";
       document.getElementsByClassName("download")[5].style.display = "block";
       document.getElementsByClassName("again")[5].style.display = "inline-block";
+      mostra_animal_classificado("tartaruga", "errado");
       termina_jogo();
     }
 
